@@ -1,13 +1,16 @@
-// let type = "WebGL"
-// if(!PIXI.utils.isWebGLSupported()){
-//   type = "canvas"
-// }
+var geojsonLayer = new L.GeoJSON.AJAX("../assets/africa.geo.json");       
 
-// PIXI.utils.sayHello(type)
-// let app = new PIXI.Application({width: 800, height: 800});
-// document.body.appendChild(app.view);
 
-var map = L.map('map').setView([51.505, -0.09], 13);
+let type = "WebGL"
+if(!PIXI.utils.isWebGLSupported()){
+  type = "canvas"
+}
+
+PIXI.utils.sayHello(type)
+let app = new PIXI.Application({width: 800, height: 800});
+document.body.appendChild(app.view);
+
+var map = L.map('map').setView([5, 44.5085], 3);
 var pixiOverlay = L.pixiOverlay(function(utils) {
         // your drawing code here
     }, new PIXI.Container());
@@ -19,3 +22,4 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
     id: 'mapbox.streets',
     accessToken: 'pk.eyJ1IjoicGpzdGVmYW4iLCJhIjoiY2puZ2JlZTlhMDFlNzNvbzAwNmRwNDhlOCJ9.ZYsixdWrsUwZ9wwYifvdgQ'
 }).addTo(map);
+geojsonLayer.addTo(map);
