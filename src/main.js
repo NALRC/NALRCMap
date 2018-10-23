@@ -59,14 +59,13 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 var geojson;
 
 function zoomToFeature(e, feature) {
-    console.log(feature);
+    console.log(e.target.feature.properties.name);
 
 }
 
 function onEachFeature(feature, layer) {
-    console.log()
     layer.on({
-        click: zoomToFeature.bind(feature)
+        click: zoomToFeature
     });
 }
 
