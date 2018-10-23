@@ -56,42 +56,27 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
     accessToken: 'pk.eyJ1IjoicGpzdGVmYW4iLCJhIjoiY2puZ2JlZTlhMDFlNzNvbzAwNmRwNDhlOCJ9.ZYsixdWrsUwZ9wwYifvdgQ'
 }).addTo(map);
 
+var geojson;
 
-function clickCountry(e){
-	console.log(e.target);
-}
+function zoomToFeature(e, feature) {
+    console.log(feature);
 
-function hoverCountry(e){
-	console.log('hovering');
 }
 
 function onEachFeature(feature, layer) {
+    console.log()
     layer.on({
-    	mouseover: hoverCountry,
-        click: zoomToFeature
+        click: zoomToFeature.bind(feature)
     });
 }
 
-
-// geojsonLayer.onEachFeature = function(feature, layer) {
-//     layer.on({
-//     	mouseover: hoverCountry,
-//         click: function(){console.log('click')}
-//     });
-// }
-var geojsonLayer = new L.GeoJSON.AJAX("../assets/africa.geo.json",{
+geojson = L.geoJson(countryData, {
     onEachFeature: onEachFeature
-});       
+}).addTo(map);
 
+// function onMapClick(e) {
+//     console.log(e.target);
+// }
 
-console.log(geojsonLayer);
-
-
-geojsonLayer.addTo(map);
-
-function onMapClick(e) {
-    console.log(e);
-}
-
-map.on('click', onMapClick);
+//map.on('click', onMapClick);
 
