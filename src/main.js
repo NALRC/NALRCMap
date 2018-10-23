@@ -1,3 +1,5 @@
+var currentState = 'countryMap';
+
 
 let type = "WebGL"
 if(!PIXI.utils.isWebGLSupported()){
@@ -58,14 +60,13 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 
 var geojson;
 
-function zoomToFeature(e, feature) {
-    console.log(e.target.feature.properties.name);
-
+function clickCountry(e, feature) {
+    openToCountry(e.target.feature);
 }
 
 function onEachFeature(feature, layer) {
     layer.on({
-        click: zoomToFeature
+        click: clickCountry
     });
 }
 
@@ -73,9 +74,15 @@ geojson = L.geoJson(countryData, {
     onEachFeature: onEachFeature
 }).addTo(map);
 
-// function onMapClick(e) {
-//     console.log(e.target);
-// }
+function onMapClick(e) {
+    if(currentState == "countryPage"){
+        openCountryMap();
+    }
+}
 
-//map.on('click', onMapClick);
+map.on('click', onMapClick);
 
+function pageTransition(destination){
+    currentState = "transition";
+    setTimeout(() => {currentState = destination}, 10);
+}
