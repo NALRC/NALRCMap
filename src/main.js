@@ -1,6 +1,8 @@
 var currentState = "countryMap";
 var currentCountryText = document.getElementById("mouseOverCountryName");
 var countryMapUi = document.getElementById("countryMapUi");
+var backToCountryMap = document.getElementById("backToCountryMap");
+
 var mainMapCoordinates = L.point(5, 40);
 var map = L.map('map', {zoomControl: false}).setView([mainMapCoordinates.x,mainMapCoordinates.y], 3);
 var geojson;
@@ -10,13 +12,15 @@ geojson = L.geoJson(countryData, {
 }).addTo(map);
 
 initializeLayerStates();
-map.on('click', onMapClick);
+//map.on('click', onMapClick);
 
-function onMapClick(e) {
-    if(currentState == "countryPage"){
-        openCountryMap();
-    }
-}
+// function onMapClick(e) {
+//     if(currentState == "countryPage"){
+//         openCountryMap();
+//     }
+// }
+
+backToCountryMap.onclick = function(){openCountryMap()};
 
 //click debouncing
 function pageTransition(destination){

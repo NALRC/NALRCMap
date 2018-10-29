@@ -4,5 +4,6 @@ function openCountryMap(){
     pageTransition("countryMap");
     countryMapUi.style.width = '265px';
     countryMapUi.style.left = '500px';
+    backToCountryMap.style.opacity = 0;
 }
 

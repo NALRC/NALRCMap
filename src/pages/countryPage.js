@@ -15,6 +15,7 @@ function openToCountry(country){
         });
         countryMapUi.style.width = '730px';
         countryMapUi.style.left = '35px';
+        setTimeout(()=>{backToCountryMap.style.opacity = 1;},300);
     }
 }
 
