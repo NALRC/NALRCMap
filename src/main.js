@@ -2,6 +2,10 @@ var currentState = "countryMap";
 var currentCountryText = document.getElementById("mouseOverCountryName");
 var countryMapUi = document.getElementById("countryMapUi");
 var backToCountryMap = document.getElementById("backToCountryMap");
+var toLanguage = document.getElementById("toLanguage");
+var languageUi = document.getElementById("languageUi");
+var languageName = document.getElementById("languageName");
+var backToCountryPage = document.getElementById("backToCountryPage");
 
 var mainMapCoordinates = L.point(5, 40);
 var map = L.map('map', {zoomControl: false}).setView([mainMapCoordinates.x,mainMapCoordinates.y], 3);
@@ -21,7 +25,8 @@ initializeLayerStates();
 // }
 
 backToCountryMap.onclick = function(){openCountryMap()};
-
+backToCountryPage.onclick = function(){closeLanguagePage()};
+toLanguage.onclick = function(){openLanguagePage()};
 //click debouncing
 function pageTransition(destination){
     this.currentState = "transition";

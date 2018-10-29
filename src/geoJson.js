@@ -14,7 +14,7 @@ function mouseExitCountry(e, feature){
 }
 
 function clickCountry(e, feature) {
-    openToCountry(e.target.feature);
+    openToCountryFromMap(e.target.feature);
 }
 
 function onEachFeature(feature, layer) {
