@@ -1,3 +1,5 @@
+
+
 var currentState = "countryMap";
 //the leaflet map
 var mainMapCoordinates = L.point(5, 19.5085);
@@ -9,26 +11,30 @@ loader.add('marker', '../assets/images/logoN.jpg');
 loader.load(function(loader, resources) {
     //load all images and videos here
     var markerTexture = resources.marker.texture;
-    var markerLatLng = [5, 44.5085];
+    var markerPos = L.point(600,100);
+    var markerLatLng = map.layerPointToLatLng(markerPos);
     var marker = new PIXI.Sprite(markerTexture);
 
     var pixiContainer = new PIXI.Container();
     pixiContainer.addChild(marker);
 
+    var firstDraw = true;
+    var prevZoom;
+
     var pixiOverlay = L.pixiOverlay(function(utils) {
-        
-        //pixi environment variables
-        var w = window;
         var zoom = utils.getMap().getZoom();
         var container = utils.getContainer();
         var renderer = utils.getRenderer();
         var project = utils.latLngToLayerPoint;
         var scale = utils.getScale();
-        var markerCoords = project(markerLatLng);
-        
-        //renderer.render(container);
 
-        //this.currentState = "countryMap";
+        if (currentState == "countryMap") {
+            drawMainMapUi();
+        }else if (currentState == "countryPage"){
+            drawCountryPageUi();
+        }
+
+
         var geojson;
 
         geojson = L.geoJson(countryData, {
@@ -42,13 +48,26 @@ loader.load(function(loader, resources) {
 
 
 
+        function drawMainMapUi(){
+            var markerCoords = project(markerLatLng);
+            marker.x = markerCoords.x;
+            marker.y = markerCoords.y;
+            marker.scale.set(.25 / scale);
+        }
+
+        function drawCountryPageUi(){
+            var markerCoords = project(map.layerPointToLatLng(markerPos));
+            marker.x = markerCoords.x;
+            marker.y = markerCoords.y;
+            marker.scale.set(1 / scale);
+        }
+
         function initializeLayerStates(){
             geojson.eachLayer((geo) =>{
                 geo.feature.properties.isMouseOver = false;
                 geo.feature.properties.isSelected = false;
             });
         }
-        
 
 
         //geojson mouse events
@@ -146,7 +165,7 @@ loader.load(function(loader, resources) {
             });
         }
 
-
+        renderer.render(container);
     }, pixiContainer);
     pixiOverlay.addTo(map);
 });
