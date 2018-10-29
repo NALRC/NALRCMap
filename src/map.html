@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>NALRC Map</title>
    <link rel="stylesheet" href="lib/leaflet/leaflet.css"/>
-
+   <link rel="stylesheet" href="css/main.css"/>
 </head>
   <script src="lib/leaflet/leaflet.js"></script>
   <script src="lib/leaflet.ajax.min.js"></script>
@@ -13,7 +13,10 @@
   <script src="pages/countryMap.js"></script>
   <script src="geoJson.js"></script>
 <body>
-  <div id="map" style="position: 'absolute';height: 600px; width: 800px;"></div>
+  <div id="map"></div>
+  <div id="countryMapUi">
+    <p id="mouseOverCountryName"></p>
+  </div>
   <script src="main.js"></script>
 </body>
 </html>

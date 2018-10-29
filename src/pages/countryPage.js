@@ -1,6 +1,8 @@
 
+
 function openToCountry(country){
     if(this.currentState == "countryMap"){
+    	setText(currentCountry, country.properties.name);
         pageTransition("countryPage");
         currentCountry = country.properties.name;
         country.properties.isSelected = true;
@@ -13,3 +15,5 @@ function openToCountry(country){
         });
     }
 }
+
+

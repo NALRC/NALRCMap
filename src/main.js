@@ -1,7 +1,7 @@
-
-
 var currentState = "countryMap";
-var mainMapCoordinates = L.point(5, 19.5085);
+var currentCountry = document.getElementById("mouseOverCountryName");
+console.log(currentCountry)
+var mainMapCoordinates = L.point(5, 40);
 var map = L.map('map', {zoomControl: false}).setView([mainMapCoordinates.x,mainMapCoordinates.y], 3);
 var geojson;
 geojson = L.geoJson(countryData, {
@@ -12,50 +12,23 @@ geojson = L.geoJson(countryData, {
 initializeLayerStates();
 map.on('click', onMapClick);
 
-
-//geojson mouse events
-function mouseEnterCountry(e, feature){
-    //console.log("entered " + e.target.feature.properties.name)
-    e.target.feature.properties.isMouseOver = true;
-    geojson.resetStyle(e.target);
-}
-
-function mouseExitCountry(e, feature){
-    //console.log("exited " + e.target.feature.properties.name)
-    e.target.feature.properties.isMouseOver = false;
-    geojson.resetStyle(e.target);
-}
-
-function clickCountry(e, feature) {
-    openToCountry(e.target.feature);
-}
-
-function onEachFeature(feature, layer) {
-    layer.on({
-        mouseover: mouseEnterCountry,
-        mouseout: mouseExitCountry,
-        click: clickCountry
-    });
-}
-
-//map click events
 function onMapClick(e) {
-    //console.log("onmapclick " , this.currentState)
     if(currentState == "countryPage"){
         openCountryMap();
     }
 }
 
-//flow
+//click debouncing
 function pageTransition(destination){
     this.currentState = "transition";
-    
     setTimeout(() => {
         this.currentState = destination;
-        
         resetStyles();
-        //console.log(" transitionfunction " + currentState)
     }, 10);
+}
+
+function setText(p, text){
+    p.innerHTML = text;
 }
 
 //leaflet map style
@@ -81,7 +54,3 @@ map.scrollWheelZoom.disable();
 map.boxZoom.disable();
 map.doubleClickZoom.disable();
 map.keyboard.disable();
-
-
-
-

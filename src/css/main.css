@@ -1,0 +1,25 @@
+#map{
+	position: absolute;
+	height: 600px;
+	width: 800px;
+	z-index: 1;
+}
+
+#countryMapUi{
+	position: absolute;
+	height: 430px;
+	width: 265px;
+	background-color: #ffffff;
+	top: 100px;
+	left: 500px;
+	z-index: 5;
+	opacity: .75;
+}
+
+#mouseOverCountryName{
+	width: 265px;
+	height: 100px;
+	font-size: 30px;
+	color: #464d59;
+	text-align: center;
+}
