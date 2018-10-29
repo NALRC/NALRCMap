@@ -8,10 +8,11 @@ function openToCountryFromMap(country){
         geojson.eachLayer(function (layer) {
           if (layer.feature.properties.name === currentCountry) {
             // Zoom to that layer.
-            map.fitBounds(layer.getBounds());
+            map.flyToBounds(layer.getBounds());
           }
         });
-        openCountryPage();
+        setTimeout(openCountryPage, 1000);
+        //openCountryPage();
     }
 }
 
