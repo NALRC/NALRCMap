@@ -10,9 +10,9 @@
 #countryMapUi{
 	position: absolute;
 	height: 430px;
-	width: 265px;
+	width: 255px;
 	top: 100px;
-	left: 500px;
+	left: 510px;
 	z-index: 5;
 	transition: width .5s, left .5s;
 }

@@ -7,8 +7,8 @@ var languageUi = document.getElementById("languageUi");
 var languageName = document.getElementById("languageName");
 var backToCountryPage = document.getElementById("backToCountryPage");
 
-var mainMapCoordinates = L.point(5, 40);
-var map = L.map('map', {zoomControl: false}).setView([mainMapCoordinates.x,mainMapCoordinates.y], 3);
+var mainMapCoordinates = L.point(1, 38);
+var map = L.map('map', {zoomControl: false, zoomSnap: 0}).setView([mainMapCoordinates.x,mainMapCoordinates.y], 3.3);
 var geojson;
 geojson = L.geoJson(countryData, {
     onEachFeature: onEachFeature,

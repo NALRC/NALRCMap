@@ -1,6 +1,6 @@
 function openToCountryFromMap(country){
     if(this.currentState == "countryMap"){
-    	setText(currentCountryText, country.properties.name);
+    	setText(currentCountryText, country.properties.name_long);
         pageTransition("countryPage");
         currentCountry = country.properties.name;
         country.properties.isSelected = true;
@@ -34,8 +34,8 @@ function slideCloseCountryPage(){
 }
 
 function closePageToMap(){
-	countryMapUi.style.width = '265px';
-    countryMapUi.style.left = '500px';
+	countryMapUi.style.width = '255px';
+    countryMapUi.style.left = '510px';
 	backToCountryMap.style.opacity = 0;
 	toLanguage.style.opacity = 0;
 }
