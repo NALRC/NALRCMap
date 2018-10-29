@@ -1,6 +1,6 @@
 var currentState = "countryMap";
-var currentCountry = document.getElementById("mouseOverCountryName");
-console.log(currentCountry)
+var currentCountryText = document.getElementById("mouseOverCountryName");
+var countryMapUi = document.getElementById("countryMapUi");
 var mainMapCoordinates = L.point(5, 40);
 var map = L.map('map', {zoomControl: false}).setView([mainMapCoordinates.x,mainMapCoordinates.y], 3);
 var geojson;
@@ -28,6 +28,9 @@ function pageTransition(destination){
 }
 
 function setText(p, text){
+    if(p == currentCountryText && currentState !== "countryMap"){
+        return;
+    }
     p.innerHTML = text;
 }
 

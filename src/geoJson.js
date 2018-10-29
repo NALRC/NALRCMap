@@ -3,14 +3,14 @@ function mouseEnterCountry(e, feature){
     //console.log("entered " + e.target.feature.properties.name)
     e.target.feature.properties.isMouseOver = true;
     geojson.resetStyle(e.target);
-    setText(currentCountry, e.target.feature.properties.name);
+    setText(currentCountryText, e.target.feature.properties.name);
 }
 
 function mouseExitCountry(e, feature){
     //console.log("exited " + e.target.feature.properties.name)
     e.target.feature.properties.isMouseOver = false;
     geojson.resetStyle(e.target);
-    setText(currentCountry, "");
+    setText(currentCountryText, "");
 }
 
 function clickCountry(e, feature) {

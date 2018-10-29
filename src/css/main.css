@@ -3,6 +3,8 @@
 	height: 600px;
 	width: 800px;
 	z-index: 1;
+	top: 0;
+	left: 0;
 }
 
 #countryMapUi{
@@ -14,6 +16,7 @@
 	left: 500px;
 	z-index: 5;
 	opacity: .75;
+	transition: width .5s, left .5s;
 }
 
 #mouseOverCountryName{
@@ -23,3 +26,4 @@
 	color: #464d59;
 	text-align: center;
 }
+

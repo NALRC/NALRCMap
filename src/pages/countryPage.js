@@ -2,7 +2,7 @@
 
 function openToCountry(country){
     if(this.currentState == "countryMap"){
-    	setText(currentCountry, country.properties.name);
+    	setText(currentCountryText, country.properties.name);
         pageTransition("countryPage");
         currentCountry = country.properties.name;
         country.properties.isSelected = true;
@@ -13,6 +13,8 @@ function openToCountry(country){
             map.fitBounds(layer.getBounds());
           }
         });
+        countryMapUi.style.width = '730px';
+        countryMapUi.style.left = '35px';
     }
 }
 
