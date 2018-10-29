@@ -1,13 +1,9 @@
 
 
 var currentState = "countryMap";
-//the leaflet map
 var mainMapCoordinates = L.point(5, 19.5085);
 var map = L.map('map', {zoomControl: false}).setView([mainMapCoordinates.x,mainMapCoordinates.y], 3);
-
-
 var geojson;
-
 geojson = L.geoJson(countryData, {
     onEachFeature: onEachFeature,
     style: style
@@ -15,14 +11,6 @@ geojson = L.geoJson(countryData, {
 
 initializeLayerStates();
 map.on('click', onMapClick);
-
-
-function initializeLayerStates(){
-    geojson.eachLayer((geo) =>{
-        geo.feature.properties.isMouseOver = false;
-        geo.feature.properties.isSelected = false;
-    });
-}
 
 
 //geojson mouse events
@@ -69,37 +57,6 @@ function pageTransition(destination){
         //console.log(" transitionfunction " + currentState)
     }, 10);
 }
-
-//appearance of geojson
-function style(feature) {
-    return {
-        fillColor: pickFillColor(feature),
-        weight: 2,
-        opacity: 1,
-        color: 'white',
-        dashArray: '3',
-        fillOpacity: 0.7
-    };
-}
-
-function pickFillColor(feature){
-    var color;
-    //console.log(currentState)
-    if(currentState == "countryMap"){
-        color = feature.properties.isMouseOver ? '#a9c9fc' : '#ffec63';
-    }if(currentState == "countryPage"){
-        color = feature.properties.isSelected ? '#a9c9fc' : '#b5b5b5';
-    }
-    return color;
-}
-
-function resetStyles(){
-    geojson.eachLayer((geo) =>{
-        geojson.resetStyle(geo);
-    });
-}
-
-
 
 //leaflet map style
 // L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {

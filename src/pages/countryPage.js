@@ -1,5 +1,3 @@
-var currentCountry;
-var p;
 
 function openToCountry(country){
     if(this.currentState == "countryMap"){
