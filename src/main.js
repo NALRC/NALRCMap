@@ -5,35 +5,6 @@ var currentState = "countryMap";
 var mainMapCoordinates = L.point(5, 19.5085);
 var map = L.map('map', {zoomControl: false}).setView([mainMapCoordinates.x,mainMapCoordinates.y], 3);
 
-//using leaflet pixi overlay
-var loader = new PIXI.loaders.Loader();
-loader.add('marker', '../assets/images/logoN.jpg');
-loader.load(function(loader, resources) {
-    //load all images and videos here
-    var markerTexture = resources.marker.texture;
-    var markerPos = L.point(600,100);
-    var markerLatLng = map.layerPointToLatLng(markerPos);
-    var marker = new PIXI.Sprite(markerTexture);
-
-    var pixiContainer = new PIXI.Container();
-    pixiContainer.addChild(marker);
-
-    var firstDraw = true;
-    var prevZoom;
-
-    var pixiOverlay = L.pixiOverlay(function(utils) {
-        var zoom = utils.getMap().getZoom();
-        var container = utils.getContainer();
-        var renderer = utils.getRenderer();
-        var project = utils.latLngToLayerPoint;
-        var scale = utils.getScale();
-
-        if (currentState == "countryMap") {
-            drawMainMapUi();
-        }else if (currentState == "countryPage"){
-            drawCountryPageUi();
-        }
-
 
         var geojson;
 
@@ -165,10 +136,6 @@ loader.load(function(loader, resources) {
             });
         }
 
-        renderer.render(container);
-    }, pixiContainer);
-    pixiOverlay.addTo(map);
-});
 
 
 //leaflet map style
