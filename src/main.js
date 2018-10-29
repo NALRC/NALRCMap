@@ -6,135 +6,98 @@ var mainMapCoordinates = L.point(5, 19.5085);
 var map = L.map('map', {zoomControl: false}).setView([mainMapCoordinates.x,mainMapCoordinates.y], 3);
 
 
-        var geojson;
+var geojson;
 
-        geojson = L.geoJson(countryData, {
-            onEachFeature: onEachFeature,
-            style: style
-        }).addTo(map);
+geojson = L.geoJson(countryData, {
+    onEachFeature: onEachFeature,
+    style: style
+}).addTo(map);
 
-        initializeLayerStates();
-        map.on('click', onMapClick);
-
-
+initializeLayerStates();
+map.on('click', onMapClick);
 
 
-        function drawMainMapUi(){
-            var markerCoords = project(markerLatLng);
-            marker.x = markerCoords.x;
-            marker.y = markerCoords.y;
-            marker.scale.set(.25 / scale);
-        }
-
-        function drawCountryPageUi(){
-            var markerCoords = project(map.layerPointToLatLng(markerPos));
-            marker.x = markerCoords.x;
-            marker.y = markerCoords.y;
-            marker.scale.set(1 / scale);
-        }
-
-        function initializeLayerStates(){
-            geojson.eachLayer((geo) =>{
-                geo.feature.properties.isMouseOver = false;
-                geo.feature.properties.isSelected = false;
-            });
-        }
+function initializeLayerStates(){
+    geojson.eachLayer((geo) =>{
+        geo.feature.properties.isMouseOver = false;
+        geo.feature.properties.isSelected = false;
+    });
+}
 
 
-        //geojson mouse events
-        function mouseEnterCountry(e, feature){
-            //console.log("entered " + e.target.feature.properties.name)
-            e.target.feature.properties.isMouseOver = true;
-            geojson.resetStyle(e.target);
-        }
+//geojson mouse events
+function mouseEnterCountry(e, feature){
+    //console.log("entered " + e.target.feature.properties.name)
+    e.target.feature.properties.isMouseOver = true;
+    geojson.resetStyle(e.target);
+}
 
-        function mouseExitCountry(e, feature){
-            //console.log("exited " + e.target.feature.properties.name)
-            e.target.feature.properties.isMouseOver = false;
-            geojson.resetStyle(e.target);
-        }
+function mouseExitCountry(e, feature){
+    //console.log("exited " + e.target.feature.properties.name)
+    e.target.feature.properties.isMouseOver = false;
+    geojson.resetStyle(e.target);
+}
 
-        function clickCountry(e, feature) {
-            openToCountry(e.target.feature);
-        }
+function clickCountry(e, feature) {
+    openToCountry(e.target.feature);
+}
 
-        function onEachFeature(feature, layer) {
-            layer.on({
-                mouseover: mouseEnterCountry,
-                mouseout: mouseExitCountry,
-                click: clickCountry
-            });
-        }
+function onEachFeature(feature, layer) {
+    layer.on({
+        mouseover: mouseEnterCountry,
+        mouseout: mouseExitCountry,
+        click: clickCountry
+    });
+}
 
-        //map click events
-        function onMapClick(e) {
-            //console.log("onmapclick " , this.currentState)
-            if(currentState == "countryPage"){
-                openCountryMap();
-            }
-        }
+//map click events
+function onMapClick(e) {
+    //console.log("onmapclick " , this.currentState)
+    if(currentState == "countryPage"){
+        openCountryMap();
+    }
+}
 
-        //flow
-        function pageTransition(destination){
-            this.currentState = "transition";
-            
-            setTimeout(() => {
-                this.currentState = destination;
-                
-                resetStyles();
-                //console.log(" transitionfunction " + currentState)
-            }, 10);
-        }
+//flow
+function pageTransition(destination){
+    this.currentState = "transition";
+    
+    setTimeout(() => {
+        this.currentState = destination;
+        
+        resetStyles();
+        //console.log(" transitionfunction " + currentState)
+    }, 10);
+}
 
-        function openToCountry(country){
-            if(this.currentState == "countryMap"){
-                pageTransition("countryPage");
-                currentCountry = country.properties.name;
-                country.properties.isSelected = true;
-                console.log('opening ' + currentCountry);
-                geojson.eachLayer(function (layer) {
-                  if (layer.feature.properties.name === currentCountry) {
-                    // Zoom to that layer.
-                    map.fitBounds(layer.getBounds());
-                  }
-                });
-            }
-        }
+//appearance of geojson
+function style(feature) {
+    return {
+        fillColor: pickFillColor(feature),
+        weight: 2,
+        opacity: 1,
+        color: 'white',
+        dashArray: '3',
+        fillOpacity: 0.7
+    };
+}
 
-        function openCountryMap(){
-            map.setView([mainMapCoordinates.x,mainMapCoordinates.y], 3);
-            initializeLayerStates();
-            pageTransition("countryMap");
-        }
+function pickFillColor(feature){
+    var color;
+    //console.log(currentState)
+    if(currentState == "countryMap"){
+        color = feature.properties.isMouseOver ? '#a9c9fc' : '#ffec63';
+    }if(currentState == "countryPage"){
+        color = feature.properties.isSelected ? '#a9c9fc' : '#b5b5b5';
+    }
+    return color;
+}
 
-        //appearance of geojson
-        function style(feature) {
-            return {
-                fillColor: pickFillColor(feature),
-                weight: 2,
-                opacity: 1,
-                color: 'white',
-                dashArray: '3',
-                fillOpacity: 0.7
-            };
-        }
-
-        function pickFillColor(feature){
-            var color;
-            //console.log(currentState)
-            if(currentState == "countryMap"){
-                color = feature.properties.isMouseOver ? '#a9c9fc' : '#ffec63';
-            }if(currentState == "countryPage"){
-                color = feature.properties.isSelected ? '#a9c9fc' : '#b5b5b5';
-            }
-            return color;
-        }
-
-        function resetStyles(){
-            geojson.eachLayer((geo) =>{
-                geojson.resetStyle(geo);
-            });
-        }
+function resetStyles(){
+    geojson.eachLayer((geo) =>{
+        geojson.resetStyle(geo);
+    });
+}
 
 
 
