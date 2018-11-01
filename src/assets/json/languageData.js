@@ -108,7 +108,7 @@ var languageData = {
 		"books":{}
 	},
 	"Dinka":{
-		"countries":[],
+		"countries":["South Sudan", "Sudan"],
 		"text":{
 			"english":"",
 			"target":""
@@ -117,7 +117,7 @@ var languageData = {
 		"books":{}
 	},
 	"Ebira":{
-		"countries":[],
+		"countries":["Nigeria"],
 		"text":{
 			"english":"",
 			"target":""
@@ -126,7 +126,7 @@ var languageData = {
 		"books":{}
 	},
 	"Edo":{
-		"countries":[],
+		"countries":["Nigeria"],
 		"text":{
 			"english":"",
 			"target":""
@@ -135,7 +135,7 @@ var languageData = {
 		"books":{}
 	},
 	"Ewe":{
-		"countries":[],
+		"countries":["Ghana", "Togo", "Benin"],
 		"text":{
 			"english":"",
 			"target":""
@@ -144,7 +144,7 @@ var languageData = {
 		"books":{}
 	},
 	"Fang":{
-		"countries":[],
+		"countries":["Equatorial Guinea", "Gabon", "Republic of the Congo"],
 		"text":{
 			"english":"",
 			"target":""
@@ -153,7 +153,7 @@ var languageData = {
 		"books":{}
 	},
 	"Fon":{
-		"countries":[],
+		"countries":["Benin","Togo","Nigeria"],
 		"text":{
 			"english":"",
 			"target":""
@@ -161,8 +161,8 @@ var languageData = {
 		"brochure_link":"",
 		"books":{}
 	},
-	"Fulfuda":{
-		"countries":[],
+	"Fulfude":{
+		"countries":["Mauritania", "Mali", "Gambia", "Guinea", "Guinea-Bissau", "Sierra Leone", "Burkina Faso", "Senegal", "Cameroon", "Togo", "Ghana", "Benin", "Nigeria", "Niger"],
 		"text":{
 			"english":"",
 			"target":""
@@ -171,7 +171,7 @@ var languageData = {
 		"books":{}
 	},
 	"Moore & Dioula":{
-		"countries":[],
+		"countries":["Burkina Faso"],
 		"text":{
 			"english":"",
 			"target":""
@@ -180,16 +180,7 @@ var languageData = {
 		"books":{}
 	},
 	"Gbaya":{
-		"countries":[],
-		"text":{
-			"english":"",
-			"target":""
-		},
-		"brochure_link":"",
-		"books":{}
-	},
-	"Gurage":{
-		"countries":[],
+		"countries":["Central African Republic", "Democratic Republic of the Congo", "Republic of the Congo", "Cameroon"],
 		"text":{
 			"english":"",
 			"target":""
@@ -198,16 +189,7 @@ var languageData = {
 		"books":{}
 	},
 	"Hausa":{
-		"countries":[],
-		"text":{
-			"english":"",
-			"target":""
-		},
-		"brochure_link":"",
-		"books":{}
-	},
-	"Ibibio":{
-		"countries":[],
+		"countries":["Benin","Burkina Faso","Cameroon","Central African Republic", "Chad", "Congo", "Eritrea", "Ghana", "Niger", "Sudan", "Togo", "Nigeria"],
 		"text":{
 			"english":"",
 			"target":""
@@ -216,7 +198,7 @@ var languageData = {
 		"books":{}
 	},
 	"Idoma":{
-		"countries":[],
+		"countries":["Nigeria"],
 		"text":{
 			"english":"",
 			"target":""
@@ -225,16 +207,7 @@ var languageData = {
 		"books":{}
 	},
 	"Igbo":{
-		"countries":[],
-		"text":{
-			"english":"",
-			"target":""
-		},
-		"brochure_link":"",
-		"books":{}
-	},
-	"Ijaw":{
-		"countries":[],
+		"countries":["Nigeria"],
 		"text":{
 			"english":"",
 			"target":""
@@ -243,7 +216,7 @@ var languageData = {
 		"books":{}
 	},
 	"IsiXhosa":{
-		"countries":[],
+		"countries":["South Africa", "Zimbabwe", "Lesotho"],
 		"text":{
 			"english":"",
 			"target":""
@@ -252,7 +225,7 @@ var languageData = {
 		"books":{}
 	},
 	"Kamba":{
-		"countries":[],
+		"countries":["Kenya", "Tanzania"],
 		"text":{
 			"english":"",
 			"target":""
@@ -261,7 +234,7 @@ var languageData = {
 		"books":{}
 	},
 	"Kikongo":{
-		"countries":[],
+		"countries":["Angola", "Democratic Republic of the Congo", "Republic of the Congo"],
 		"text":{
 			"english":"",
 			"target":""
@@ -270,7 +243,7 @@ var languageData = {
 		"books":{}
 	},
 	"Kikuyu":{
-		"countries":[],
+		"countries":["Kenya", "Tanzania", "Uganda"],
 		"text":{
 			"english":"",
 			"target":""
@@ -279,7 +252,7 @@ var languageData = {
 		"books":{}
 	},
 	"Kimbundu":{
-		"countries":[],
+		"countries":["Angola"],
 		"text":{
 			"english":"",
 			"target":""
@@ -288,7 +261,7 @@ var languageData = {
 		"books":{}
 	},
 	"Kinyarwanda":{
-		"countries":[],
+		"countries":["Democratic Republic of the Congo", "Uganda", "Burundi", "Tanzania"],
 		"text":{
 			"english":"",
 			"target":""
@@ -297,7 +270,7 @@ var languageData = {
 		"books":{}
 	},
 	"Kirundi":{
-		"countries":[],
+		"countries":["Burundi", "Tanzania", "Democratic Republic of the Congo"],
 		"text":{
 			"english":"",
 			"target":""
@@ -306,7 +279,7 @@ var languageData = {
 		"books":{}
 	},
 	"Kpelle":{
-		"countries":[],
+		"countries":["Liberia"],
 		"text":{
 			"english":"",
 			"target":""
@@ -315,7 +288,7 @@ var languageData = {
 		"books":{}
 	},
 	"Krio":{
-		"countries":[],
+		"countries":["Sierra Leone"],
 		"text":{
 			"english":"",
 			"target":""
@@ -324,7 +297,7 @@ var languageData = {
 		"books":{}
 	},
 	"Kru":{
-		"countries":[],
+		"countries":["Liberia", "Côte d'Ivoire"],
 		"text":{
 			"english":"",
 			"target":""
@@ -333,7 +306,7 @@ var languageData = {
 		"books":{}
 	},
 	"Lango":{
-		"countries":[],
+		"countries":["Uganda"],
 		"text":{
 			"english":"",
 			"target":""
@@ -342,7 +315,7 @@ var languageData = {
 		"books":{}
 	},
 	"Lingala":{
-		"countries":[],
+		"countries":["Democratic Republic of the Congo", "Angola" ,"Central African Republic"],
 		"text":{
 			"english":"",
 			"target":""
@@ -351,7 +324,7 @@ var languageData = {
 		"books":{}
 	},
 	"Luba":{
-		"countries":[],
+		"countries":["Democratic Republic of the Congo"],
 		"text":{
 			"english":"",
 			"target":""
@@ -360,16 +333,7 @@ var languageData = {
 		"books":{}
 	},
 	"Luganda":{
-		"countries":[],
-		"text":{
-			"english":"",
-			"target":""
-		},
-		"brochure_link":"",
-		"books":{}
-	},
-	"Luo":{
-		"countries":[],
+		"countries":["Uganda"],
 		"text":{
 			"english":"",
 			"target":""
@@ -378,7 +342,7 @@ var languageData = {
 		"books":{}
 	},
 	"Maasai":{
-		"countries":[],
+		"countries":["Kenya", "Tanzania"],
 		"text":{
 			"english":"",
 			"target":""
@@ -387,7 +351,7 @@ var languageData = {
 		"books":{}
 	},
 	"Makhuwa":{
-		"countries":[],
+		"countries":"Mozambique", "Tanzania", "Malawi"],
 		"text":{
 			"english":"",
 			"target":""
@@ -396,7 +360,7 @@ var languageData = {
 		"books":{}
 	},
 	"Makonde":{
-		"countries":[],
+		"countries":["Tanzania", "Malawi", "Kenya"],
 		"text":{
 			"english":"",
 			"target":""
@@ -405,7 +369,7 @@ var languageData = {
 		"books":{}
 	},
 	"Malagasy":{
-		"countries":[],
+		"countries":["Madagascar"],
 		"text":{
 			"english":"",
 			"target":""
@@ -414,7 +378,7 @@ var languageData = {
 		"books":{}
 	},
 	"Mandinka":{
-		"countries":[],
+		"countries":["Senegal", "Gambia", "Guinea"],
 		"text":{
 			"english":"",
 			"target":""
@@ -423,7 +387,7 @@ var languageData = {
 		"books":{}
 	},
 	"Masaaba":{
-		"countries":[],
+		"countries":["Uganda"],
 		"text":{
 			"english":"",
 			"target":""
@@ -432,7 +396,7 @@ var languageData = {
 		"books":{}
 	},
 	"Mende":{
-		"countries":[],
+		"countries":["Sierra Leone", "Liberia"],
 		"text":{
 			"english":"",
 			"target":""
@@ -441,7 +405,7 @@ var languageData = {
 		"books":{}
 	},
 	"Meru":{
-		"countries":[],
+		"countries":["Kenya"],
 		"text":{
 			"english":"",
 			"target":""
@@ -450,7 +414,7 @@ var languageData = {
 		"books":{}
 	},
 	"Nama":{
-		"countries":[],
+		"countries":["Namibia", "Botswana", "South Africa"],
 		"text":{
 			"english":"",
 			"target":""
@@ -459,7 +423,7 @@ var languageData = {
 		"books":{}
 	},
 	"Ndebele":{
-		"countries":[],
+		"countries":["Zimbabwe", "Botswana"],
 		"text":{
 			"english":"",
 			"target":""
@@ -468,7 +432,7 @@ var languageData = {
 		"books":{}
 	},
 	"Nubian":{
-		"countries":[],
+		"countries":["Sudan", "Egypt"],
 		"text":{
 			"english":"",
 			"target":""
@@ -477,7 +441,7 @@ var languageData = {
 		"books":{}
 	},
 	"Nuer":{
-		"countries":[],
+		"countries":["South Sudan", "Ethiopia"],
 		"text":{
 			"english":"",
 			"target":""
@@ -486,7 +450,7 @@ var languageData = {
 		"books":{}
 	},
 	"Nupe":{
-		"countries":[],
+		"countries":["Nigeria"],
 		"text":{
 			"english":"",
 			"target":""
@@ -495,7 +459,7 @@ var languageData = {
 		"books":{}
 	},
 	"Oromo":{
-		"countries":[],
+		"countries":["Ethiopia", "Kenya", "Somalia", "Egypt"],
 		"text":{
 			"english":"",
 			"target":""
@@ -504,7 +468,7 @@ var languageData = {
 		"books":{}
 	},
 	"Oshvambo":{
-		"countries":[],
+		"countries":["Angola", "Namibia"],
 		"text":{
 			"english":"",
 			"target":""
@@ -513,7 +477,7 @@ var languageData = {
 		"books":{}
 	},
 	"Pulaar":{
-		"countries":[],
+		"countries":["Guinea", "Guinea-Bissau", "Senegal", "Gambia", "Mali", "Mauritania"],
 		"text":{
 			"english":"",
 			"target":""
@@ -521,8 +485,8 @@ var languageData = {
 		"brochure_link":"",
 		"books":{}
 	},
-	"Runyanko":{
-		"countries":[],
+	"Runyankore":{
+		"countries":["Uganda"],
 		"text":{
 			"english":"",
 			"target":""
@@ -531,7 +495,7 @@ var languageData = {
 		"books":{}
 	},
 	"Sango":{
-		"countries":[],
+		"countries":["Central African Republic", "Chad", "Democratic Republic of the Congo"],
 		"text":{
 			"english":"",
 			"target":""
@@ -540,7 +504,7 @@ var languageData = {
 		"books":{}
 	},
 	"Senufo":{
-		"countries":[],
+		"countries":["Côte d'Ivoire", "Mali", "Burkina Faso", "Ghana"],
 		"text":{
 			"english":"",
 			"target":""
@@ -549,7 +513,7 @@ var languageData = {
 		"books":{}
 	},
 	"Sepedi":{
-		"countries":[],
+		"countries":["South Africa"],
 		"text":{
 			"english":"",
 			"target":""
@@ -558,7 +522,7 @@ var languageData = {
 		"books":{}
 	},
 	"Serer-Sine":{
-		"countries":[],
+		"countries":["Gambia", "Senegal"],
 		"text":{
 			"english":"",
 			"target":""
@@ -567,7 +531,7 @@ var languageData = {
 		"books":{}
 	},
 	"Sesotho":{
-		"countries":[],
+		"countries":["South Africa", "Lesotho"],
 		"text":{
 			"english":"",
 			"target":""
@@ -576,7 +540,7 @@ var languageData = {
 		"books":{}
 	},
 	"Setswana":{
-		"countries":[],
+		"countries":"Botswana", "South Africa"],
 		"text":{
 			"english":"",
 			"target":""
@@ -585,7 +549,7 @@ var languageData = {
 		"books":{}
 	},
 	"Shona":{
-		"countries":[],
+		"countries":["Zimbabwe", "Mozambique"],
 		"text":{
 			"english":"",
 			"target":""
@@ -594,7 +558,7 @@ var languageData = {
 		"books":{}
 	},
 	"Sidamo":{
-		"countries":[],
+		"countries":["Ethiopia"],
 		"text":{
 			"english":"",
 			"target":""
@@ -603,7 +567,7 @@ var languageData = {
 		"books":{}
 	},
 	"SiSwati":{
-		"countries":[],
+		"countries":["South Africa", "Lesotho", "Mozambique", "Swaziland"],
 		"text":{
 			"english":"",
 			"target":""
@@ -612,7 +576,7 @@ var languageData = {
 		"books":{}
 	},
 	"Soga":{
-		"countries":[],
+		"countries":["Uganda"],
 		"text":{
 			"english":"",
 			"target":""
@@ -621,7 +585,7 @@ var languageData = {
 		"books":{}
 	},
 	"Somali":{
-		"countries":[],
+		"countries":["Somalia", "Djibouti", "Ethiopia", "Yemen", "Kenya"],
 		"text":{
 			"english":"",
 			"target":""
@@ -630,7 +594,7 @@ var languageData = {
 		"books":{}
 	},
 	"Soninke":{
-		"countries":[],
+		"countries":["Côte d'Ivoire", "Gambia", "Guinea-Bissau", "Mali", "Senegal", "Mauritania"],
 		"text":{
 			"english":"",
 			"target":""
@@ -639,7 +603,7 @@ var languageData = {
 		"books":{}
 	},
 	"Susu":{
-		"countries":[],
+		"countries":["Guinea", "Guinea-Bissau", "Senegal", "Sierra Leone"],
 		"text":{
 			"english":"",
 			"target":""
@@ -648,7 +612,7 @@ var languageData = {
 		"books":{}
 	},
 	"Swahili":{
-		"countries":[],
+		"countries":["Tanzania", "Burundi", "Democratic Republic of the Congo", "Kenya", "Mozambique", "Rwanda", "Somalia", "South Africa", "Uganda"],
 		"text":{
 			"english":"",
 			"target":""
@@ -657,7 +621,7 @@ var languageData = {
 		"books":{}
 	},
 	"Tamazight":{
-		"countries":[],
+		"countries":["Algeria"],
 		"text":{
 			"english":"",
 			"target":""
@@ -666,7 +630,7 @@ var languageData = {
 		"books":{}
 	},
 	"Temne":{
-		"countries":[],
+		"countries":["Sierra Leone"],
 		"text":{
 			"english":"",
 			"target":""
@@ -675,7 +639,7 @@ var languageData = {
 		"books":{}
 	},
 	"Teso":{
-		"countries":[],
+		"countries":["Kenya", "Uganda"],
 		"text":{
 			"english":"",
 			"target":""
@@ -684,7 +648,7 @@ var languageData = {
 		"books":{}
 	},
 	"Tigrinya":{
-		"countries":[],
+		"countries":["Eritrea", "Ethiopia"],
 		"text":{
 			"english":"",
 			"target":""
@@ -693,7 +657,7 @@ var languageData = {
 		"books":{}
 	},
 	"Tiv":{
-		"countries":[],
+		"countries":["Nigeria"],
 		"text":{
 			"english":"",
 			"target":""
@@ -702,7 +666,7 @@ var languageData = {
 		"books":{}
 	},
 	"Tonga":{
-		"countries":[],
+		"countries":["Zambia", "Zimbabwe"],
 		"text":{
 			"english":"",
 			"target":""
@@ -711,7 +675,7 @@ var languageData = {
 		"books":{}
 	},
 	"Tsonga":{
-		"countries":[],
+		"countries":["South Africa", "Zimbabwe", "Mozambique", "Swaziland"],
 		"text":{
 			"english":"",
 			"target":""
@@ -720,7 +684,7 @@ var languageData = {
 		"books":{}
 	},
 	"Tumbuka":{
-		"countries":[],
+		"countries":["Malawi", "Zambia", "Tanzania"],
 		"text":{
 			"english":"",
 			"target":""
@@ -729,7 +693,7 @@ var languageData = {
 		"books":{}
 	},
 	"Twi":{
-		"countries":[],
+		"countries":["Ghana", "Côte d'Ivoire"],
 		"text":{
 			"english":"",
 			"target":""
@@ -738,7 +702,7 @@ var languageData = {
 		"books":{}
 	},
 	"Umbundu":{
-		"countries":[],
+		"countries":["Angola"],
 		"text":{
 			"english":"",
 			"target":""
@@ -747,7 +711,7 @@ var languageData = {
 		"books":{}
 	},
 	"Venda":{
-		"countries":[],
+		"countries":["South Africa", "Zimbabwe"],
 		"text":{
 			"english":"",
 			"target":""
@@ -756,7 +720,7 @@ var languageData = {
 		"books":{}
 	},
 	"Wolof":{
-		"countries":[],
+		"countries":["Senegal", "Gambia", "Mauritania"],
 		"text":{
 			"english":"",
 			"target":""
@@ -765,7 +729,7 @@ var languageData = {
 		"books":{}
 	},
 	"Yoruba":{
-		"countries":[],
+		"countries":["Nigeria", "Benin", "Togo"],
 		"text":{
 			"english":"",
 			"target":""
@@ -774,7 +738,7 @@ var languageData = {
 		"books":{}
 	},
 	"Zarma":{
-		"countries":[],
+		"countries":["Niger"],
 		"text":{
 			"english":"",
 			"target":""
@@ -783,7 +747,7 @@ var languageData = {
 		"books":{}
 	},
 	"Zande":{
-		"countries":[],
+		"countries":["Democratic Republic of the Congo", "Central African Republic", "South Sudan"],
 		"text":{
 			"english":"",
 			"target":""
@@ -792,7 +756,7 @@ var languageData = {
 		"books":{}
 	},
 	"Zulu":{
-		"countries":[],
+		"countries":["Swaziland", "Botswana", "Lesotho", "Malawi", "Mozambique"],
 		"text":{
 			"english":"",
 			"target":""
