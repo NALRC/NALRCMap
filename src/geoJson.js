@@ -3,14 +3,24 @@ function mouseEnterCountry(e, feature){
     //console.log("entered " + e.target.feature.properties.name)
     e.target.feature.properties.isMouseOver = true;
     geojson.resetStyle(e.target);
-    setText(currentCountryText, e.target.feature.properties.name_long);
+    setText(currentCountryNameText, e.target.feature.properties.name_long);
+    setText(currentCountryLanguagesText, formatLanguagesList(e.target.feature.properties.languages));
+}
+
+function formatLanguagesList(list){
+    var langList = "";
+    for(var l in list){
+        langList += list[l] + ',  ';
+    }
+    return langList.slice(0,langList.length - 3);
 }
 
 function mouseExitCountry(e, feature){
     //console.log("exited " + e.target.feature.properties.name)
     e.target.feature.properties.isMouseOver = false;
     geojson.resetStyle(e.target);
-    setText(currentCountryText, "");
+    setText(currentCountryNameText, "");
+    setText(currentCountryLanguagesText, "");
 }
 
 function clickCountry(e, feature) {

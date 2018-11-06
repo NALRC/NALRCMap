@@ -1,5 +1,6 @@
 var currentState = "countryMap";
-var currentCountryText = document.getElementById("mouseOverCountryName");
+var currentCountryNameText = document.getElementById("mouseOverCountryName");
+var currentCountryLanguagesText = document.getElementById("mouseOverCountryLanguages")
 var countryMapUi = document.getElementById("countryMapUi");
 var backToCountryMap = document.getElementById("backToCountryMap");
 var toLanguage = document.getElementById("toLanguage");
@@ -55,7 +56,7 @@ function pageTransition(destination){
 }
 
 function setText(p, text){
-    if(p == currentCountryText && currentState !== "countryMap"){
+    if(p == currentCountryNameText && currentState !== "countryMap"){
         return;
     }
     p.innerHTML = text;

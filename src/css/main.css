@@ -64,6 +64,17 @@
 	z-index: 5;
 }
 
+#mouseOverCountryLanguages{
+	position: absolute;
+	top: 120px;
+	width: 100%;
+	height: 500px;
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	z-index: 5;
+}
+
 #languageUi{
 	position: absolute;
 	height: 430px;

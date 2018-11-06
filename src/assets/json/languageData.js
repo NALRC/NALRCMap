@@ -36,7 +36,7 @@ var languageData = {
 		"books":{}
 	},
 	"Arabic":{
-		"countries":["Algeria","Chad", "Djibouti", "Egypt", "Eritrea", "Libya", "Mauritania", "Morocco", "Somalia", "Sudan", "Tunisia"],
+		"countries":["Algeria","Chad", "Djibouti", "Egypt", "Eritrea", "Libya", "Mauritania", "Morocco", "Somalia", "Somaliland", "Sudan", "Tunisia", "Western Sahara"],
 		"text":{
 			"english":"",
 			"target":""
@@ -144,7 +144,7 @@ var languageData = {
 		"books":{}
 	},
 	"Fang":{
-		"countries":["Equatorial Guinea", "Gabon", "Republic of the Congo"],
+		"countries":["Equatorial Guinea", "Gabon", "Republic of Congo"],
 		"text":{
 			"english":"",
 			"target":""
@@ -162,7 +162,7 @@ var languageData = {
 		"books":{}
 	},
 	"Fulfude":{
-		"countries":["Mauritania", "Mali", "Gambia", "Guinea", "Guinea-Bissau", "Sierra Leone", "Burkina Faso", "Senegal", "Cameroon", "Togo", "Ghana", "Benin", "Nigeria", "Niger"],
+		"countries":["Mauritania", "Mali", "The Gambia", "Guinea", "Guinea-Bissau", "Sierra Leone", "Burkina Faso", "Senegal", "Cameroon", "Togo", "Ghana", "Benin", "Nigeria", "Niger"],
 		"text":{
 			"english":"",
 			"target":""
@@ -180,7 +180,7 @@ var languageData = {
 		"books":{}
 	},
 	"Gbaya":{
-		"countries":["Central African Republic", "Democratic Republic of the Congo", "Republic of the Congo", "Cameroon"],
+		"countries":["Central African Republic", "Democratic Republic of the Congo", "Republic of Congo", "Cameroon"],
 		"text":{
 			"english":"",
 			"target":""
@@ -234,7 +234,7 @@ var languageData = {
 		"books":{}
 	},
 	"Kikongo":{
-		"countries":["Angola", "Democratic Republic of the Congo", "Republic of the Congo"],
+		"countries":["Angola", "Democratic Republic of the Congo", "Republic of Congo"],
 		"text":{
 			"english":"",
 			"target":""
@@ -378,7 +378,7 @@ var languageData = {
 		"books":{}
 	},
 	"Mandinka":{
-		"countries":["Senegal", "Gambia", "Guinea"],
+		"countries":["Senegal", "The Gambia", "Guinea"],
 		"text":{
 			"english":"",
 			"target":""
@@ -477,7 +477,7 @@ var languageData = {
 		"books":{}
 	},
 	"Pulaar":{
-		"countries":["Guinea", "Guinea-Bissau", "Senegal", "Gambia", "Mali", "Mauritania"],
+		"countries":["Guinea", "Guinea-Bissau", "Senegal", "The Gambia", "Mali", "Mauritania"],
 		"text":{
 			"english":"",
 			"target":""
@@ -522,7 +522,7 @@ var languageData = {
 		"books":{}
 	},
 	"Serer-Sine":{
-		"countries":["Gambia", "Senegal"],
+		"countries":["The Gambia", "Senegal"],
 		"text":{
 			"english":"",
 			"target":""
@@ -594,7 +594,7 @@ var languageData = {
 		"books":{}
 	},
 	"Soninke":{
-		"countries":["Côte d'Ivoire", "Gambia", "Guinea-Bissau", "Mali", "Senegal", "Mauritania"],
+		"countries":["Côte d'Ivoire", "The Gambia", "Guinea-Bissau", "Mali", "Senegal", "Mauritania"],
 		"text":{
 			"english":"",
 			"target":""
@@ -720,7 +720,7 @@ var languageData = {
 		"books":{}
 	},
 	"Wolof":{
-		"countries":["Senegal", "Gambia", "Mauritania"],
+		"countries":["Senegal", "The Gambia", "Mauritania"],
 		"text":{
 			"english":"",
 			"target":""
