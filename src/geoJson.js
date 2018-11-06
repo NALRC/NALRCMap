@@ -27,8 +27,10 @@ function onEachFeature(feature, layer) {
 
 function initializeLayerStates(){
     geojson.eachLayer((geo) =>{
-        geo.feature.properties.isMouseOver = false;
-        geo.feature.properties.isSelected = false;
+        var props = geo.feature.properties;
+        props.isMouseOver = false;
+        props.isSelected = false;
+        props.languages = [];
     });
 }
 

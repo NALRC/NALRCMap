@@ -1,6 +1,6 @@
 var languageData = {
 	"Acholi":{
-		"countries":["Kenya","Uganda","Uganda","South Sudan"],
+		"countries":["Kenya","Uganda","South Sudan"],
 		"text":{
 			"english":"",
 			"target":""
@@ -351,7 +351,7 @@ var languageData = {
 		"books":{}
 	},
 	"Makhuwa":{
-		"countries":"Mozambique", "Tanzania", "Malawi"],
+		"countries":["Mozambique", "Tanzania", "Malawi"],
 		"text":{
 			"english":"",
 			"target":""
@@ -540,7 +540,7 @@ var languageData = {
 		"books":{}
 	},
 	"Setswana":{
-		"countries":"Botswana", "South Africa"],
+		"countries":["Botswana", "South Africa"],
 		"text":{
 			"english":"",
 			"target":""

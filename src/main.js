@@ -16,6 +16,24 @@ geojson = L.geoJson(countryData, {
 }).addTo(map);
 
 initializeLayerStates();
+
+//popuate countries with language data
+for(var language in languageData){
+    var currentLanguageData = languageData[language];
+    var lCountries = currentLanguageData.countries;
+    for(var country in currentLanguageData.countries){
+        var currentCountry = lCountries[country];
+        for(var country in countryData.features){
+            currentCountryData = countryData.features[country].properties;
+            if(currentCountryData.name_long == currentCountry){
+                currentCountryData.languages.push(language);
+            }
+        }
+
+   } 
+}
+
+
 //map.on('click', onMapClick);
 
 // function onMapClick(e) {
