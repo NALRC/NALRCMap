@@ -42,14 +42,14 @@
 
 .toLanguage{
 	position: absolute;
-	height: 30px;
+	height: 25px;
 	width: 200px;
 	left: 100px;
 	top: 80px;
 	background-color: #e0e0e0;
 	font-size: 15px;
 	color: #464d59;
-	opacity: 0;
+	opacity: 1;
 	transition: opacity .2s;
 	z-index: 6;
 }

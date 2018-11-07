@@ -1,3 +1,5 @@
+var languageButtons = [];
+
 function openToCountryFromMap(country){
     if(this.currentState == "countryMap"){
     	setText(currentCountryNameText, country.properties.name_long);
@@ -20,11 +22,18 @@ function openToCountryFromMap(country){
 function createLanguageButtons(country){
 	var languages = country.properties.languages;
 	
-	var buttonHeight = toLanguage.style.height;
-	toLanguage.innerHTML = languages[0];
-	toLanguage.onclick = function(){openLanguagePage(languages[0])};
 	for(var ind in languages){
-		console.log(languages[ind]);
+		var btn = document.createElement("BUTTON");
+		countryMapUi.appendChild(btn);
+		btn.className = "toLanguage";
+		btn.style.top = (80 + 30 * ind) + 'px';
+		var language = languages[ind];
+		btn.innerHTML = language;
+		console.log(language)
+		if(ind < 4){
+			btn.onclick = function(){openLanguagePage(language)};
+		}
+		languageButtons.push(btn);
 	}
 }
 
@@ -36,7 +45,7 @@ function openCountryPage(){
     mapUiStyle.left = '35px';
     setTimeout(()=>{
     	backToCountryMap.style.opacity = 1;
-    	toLanguage.style.opacity = 1;
+    	//toLanguage.style.opacity = 1;
     },300);
 }
 
@@ -51,6 +60,12 @@ function closePageToMap(){
 	countryMapUi.style.width = '255px';
     countryMapUi.style.left = '510px';
 	backToCountryMap.style.opacity = 0;
-	toLanguage.style.opacity = 0;
+	//toLanguage.style.opacity = 0;
 	currentCountryLanguagesText.style.opacity = 1;
+
+	//destroy buttons
+	for(var i = 0; i < languageButtons.length; i++){
+		languageButtons[i].remove();
+	}
+	languageButtons = [];
 }

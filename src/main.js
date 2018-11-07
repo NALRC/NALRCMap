@@ -3,7 +3,6 @@ var currentCountryNameText = document.getElementById("mouseOverCountryName");
 var currentCountryLanguagesText = document.getElementById("mouseOverCountryLanguages")
 var countryMapUi = document.getElementById("countryMapUi");
 var backToCountryMap = document.getElementById("backToCountryMap");
-var toLanguage = document.getElementById("lang1");
 var languageUi = document.getElementById("languageUi");
 var languageName = document.getElementById("languageName");
 var backToCountryPage = document.getElementById("backToCountryPage");
@@ -45,7 +44,6 @@ for(var language in languageData){
 
 backToCountryMap.onclick = function(){openCountryMap()};
 backToCountryPage.onclick = function(){closeLanguagePage()};
-toLanguage.onclick = function(){openLanguagePage('Yoruba')};
 //click debouncing
 function pageTransition(destination){
     this.currentState = "transition";
