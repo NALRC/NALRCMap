@@ -1,6 +1,6 @@
 function openToCountryFromMap(country){
     if(this.currentState == "countryMap"){
-    	setText(currentCountryText, country.properties.name_long);
+    	setText(currentCountryNameText, country.properties.name_long);
         pageTransition("countryPage");
         currentCountry = country.properties.name;
         country.properties.isSelected = true;

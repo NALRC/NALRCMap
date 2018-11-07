@@ -44,6 +44,14 @@ function initializeLayerStates(){
     });
 }
 
+function resetLayerStates(){
+    geojson.eachLayer((geo) =>{
+        var props = geo.feature.properties;
+        props.isMouseOver = false;
+        props.isSelected = false;
+    });
+}
+
 //rules for styling of geojson shapes
 function style(feature) {
     return {

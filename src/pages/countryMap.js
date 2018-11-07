@@ -1,6 +1,6 @@
 function openCountryMap(){
     map.flyTo([mainMapCoordinates.x,mainMapCoordinates.y], 3.3);
-    initializeLayerStates();
+    resetLayerStates();
     pageTransition("countryMap");
     closePageToMap();
 }

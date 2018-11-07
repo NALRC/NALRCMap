@@ -567,7 +567,7 @@ var languageData = {
 		"books":{}
 	},
 	"SiSwati":{
-		"countries":["South Africa", "Lesotho", "Mozambique", "Swaziland"],
+		"countries":["South Africa", "Lesotho", "Mozambique", "Eswatini"],
 		"text":{
 			"english":"",
 			"target":""
@@ -675,7 +675,7 @@ var languageData = {
 		"books":{}
 	},
 	"Tsonga":{
-		"countries":["South Africa", "Zimbabwe", "Mozambique", "Swaziland"],
+		"countries":["South Africa", "Zimbabwe", "Mozambique", "Eswatini"],
 		"text":{
 			"english":"",
 			"target":""
@@ -756,7 +756,7 @@ var languageData = {
 		"books":{}
 	},
 	"Zulu":{
-		"countries":["Swaziland", "Botswana", "Lesotho", "Malawi", "Mozambique"],
+		"countries":["Eswatini", "Botswana", "Lesotho", "Malawi", "Mozambique"],
 		"text":{
 			"english":"",
 			"target":""
