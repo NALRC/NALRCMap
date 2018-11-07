@@ -1,4 +1,6 @@
-function openLanguagePage(){
+function openLanguagePage(language){
+	languageName.innerHTML = language;
+	console.log(language)
 	languageUi.style.width = '730px';
 	languageUi.style.opacity = 1;
 	backToCountryPage.style.opacity = 1;

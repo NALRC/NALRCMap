@@ -5,6 +5,7 @@ function openToCountryFromMap(country){
         currentCountry = country.properties.name;
         country.properties.isSelected = true;
         console.log('opening ' + currentCountry);
+        createLanguageButtons(country);
         geojson.eachLayer(function (layer) {
           if (layer.feature.properties.name === currentCountry) {
             // Zoom to that layer.
@@ -16,9 +17,21 @@ function openToCountryFromMap(country){
     }
 }
 
+function createLanguageButtons(country){
+	var languages = country.properties.languages;
+	
+	var buttonHeight = toLanguage.style.height;
+	toLanguage.innerHTML = languages[0];
+	toLanguage.onclick = function(){openLanguagePage(languages[0])};
+	for(var ind in languages){
+		console.log(languages[ind]);
+	}
+}
+
 function openCountryPage(){
 	var mapUiStyle = countryMapUi.style;
 	mapUiStyle.opacity = 1;
+	currentCountryLanguagesText.style.opacity = 0;
 	mapUiStyle.width = '730px';
     mapUiStyle.left = '35px';
     setTimeout(()=>{
@@ -39,4 +52,5 @@ function closePageToMap(){
     countryMapUi.style.left = '510px';
 	backToCountryMap.style.opacity = 0;
 	toLanguage.style.opacity = 0;
+	currentCountryLanguagesText.style.opacity = 1;
 }
