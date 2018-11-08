@@ -29,13 +29,12 @@ function createLanguageButtons(country){
 		btn.style.top = (80 + 30 * ind) + 'px';
 		var language = languages[ind];
 		btn.innerHTML = language;
-		console.log(language)
-		if(ind < 4){
-			btn.onclick = function(){openLanguagePage(language)};
-		}
+		btn.onclick = openLanguagePage;
+
 		languageButtons.push(btn);
 	}
 }
+
 
 function openCountryPage(){
 	var mapUiStyle = countryMapUi.style;
