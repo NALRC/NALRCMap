@@ -7,6 +7,8 @@ var languageUi = document.getElementById("languageUi");
 var languageName = document.getElementById("languageName");
 var backToCountryPage = document.getElementById("backToCountryPage");
 
+var languageCountryGroups = [];
+
 var mainMapCoordinates = L.point(1, 38);
 var map = L.map('map', {zoomControl: false, zoomSnap: 0}).setView([mainMapCoordinates.x,mainMapCoordinates.y], 3.3);
 var geojson;
@@ -21,15 +23,16 @@ initializeLayerStates();
 for(var language in languageData){
     var currentLanguageData = languageData[language];
     var lCountries = currentLanguageData.countries;
+    var featGroup = [];
     for(var country in currentLanguageData.countries){
         var currentCountry = lCountries[country];
         for(var country in countryData.features){
             currentCountryData = countryData.features[country].properties;
             if(currentCountryData.name_long == currentCountry){
                 currentCountryData.languages.push(language);
+                //featGroup.push(countryData.features[country].geometry);
             }
         }
-
    } 
 }
 

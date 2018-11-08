@@ -8,15 +8,18 @@ function openToCountryFromMap(country){
         country.properties.isSelected = true;
         console.log('opening ' + currentCountry);
         createLanguageButtons(country);
-        geojson.eachLayer(function (layer) {
-          if (layer.feature.properties.name === currentCountry) {
-            // Zoom to that layer.
-            map.flyToBounds(layer.getBounds());
-          }
-        });
+        flyToCountry();
         setTimeout(openCountryPage, 1000);
         //openCountryPage();
     }
+}
+
+function flyToCountry(){
+	geojson.eachLayer(function (layer) {
+    	if (layer.feature.properties.name === currentCountry) {
+    		map.flyToBounds(layer.getBounds());
+    	}
+    });
 }
 
 function createLanguageButtons(country){
@@ -42,6 +45,7 @@ function openCountryPage(){
 	currentCountryLanguagesText.style.opacity = 0;
 	mapUiStyle.width = '730px';
     mapUiStyle.left = '35px';
+    flyToCountry();
     setTimeout(()=>{
     	backToCountryMap.style.opacity = 1;
     	//toLanguage.style.opacity = 1;

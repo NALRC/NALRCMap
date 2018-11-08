@@ -6,6 +6,20 @@ function openLanguagePage(event){
 	backToCountryPage.style.opacity = 1;
 	languageName.style.opacity = 1;
 	languageUi.style.pointerEvents = 'auto';
+	var layers = [];
+	geojson.eachLayer(function (layer) {
+		var layerCountry = layer.feature.properties.name;
+
+    	if (languageData[lang].countries.includes(layerCountry)) {
+    		layers.push(layer);
+        	// Zoom to that layer.
+    		//map.flyToBounds(layer.getBounds());
+    	}
+
+    });
+    var featureGroup = L.featureGroup(layers);
+    //console.log(featureGroup, featureGroup.getBounds())
+    map.flyToBounds(featureGroup.getBounds());
 	slideCloseCountryPage();
 }
 
