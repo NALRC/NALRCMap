@@ -11,8 +11,7 @@ function openLanguagePage(event){
 	var layers = [];
 	geojson.eachLayer(function (layer) {
 		var layerCountry = layer.feature.properties.name;
-
-    	if (languageData[currentLanguage].countries.includes(layerCountry)) {
+    	if (languageData.languages[currentLanguage].countries.includes(layerCountry)) {
     		layers.push(layer);
         	// Zoom to that layer.
     		//map.flyToBounds(layer.getBounds());

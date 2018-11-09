@@ -21,8 +21,8 @@ geojson = L.geoJson(countryData, {
 initializeLayerStates();
 
 //popuate countries with language data
-for(var language in languageData){
-    var currentLanguageData = languageData[language];
+for(var language in languageData.languages){
+    var currentLanguageData = languageData.languages[language];
     var lCountries = currentLanguageData.countries;
     var featGroup = [];
     for(var country in currentLanguageData.countries){

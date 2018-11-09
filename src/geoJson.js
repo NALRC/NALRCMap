@@ -77,7 +77,7 @@ function pickFillColor(feature){
         color = feature.properties.isSelected ? '#a9c9fc' : '#b5b5b5';
     }if(currentState == "languagePage"){
         var name = feature.properties.name_long;
-        color = languageData[currentLanguage].countries.includes(name) ? '#0c00ff' : '#b5b5b5';
+        color = languageData.languages[currentLanguage].countries.includes(name) ? '#0c00ff' : '#b5b5b5';
     }
     return color;
 }
