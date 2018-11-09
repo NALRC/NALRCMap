@@ -3,7 +3,6 @@ var languageButtons = [];
 function openToCountryFromMap(country){
     if(this.currentState == "countryMap"){
     	setText(currentCountryNameText, country.properties.name_long);
-        pageTransition("countryPage");
         currentCountry = country.properties.name;
         country.properties.isSelected = true;
         console.log('opening ' + currentCountry);
@@ -40,6 +39,7 @@ function createLanguageButtons(country){
 
 
 function openCountryPage(){
+	pageTransition("countryPage");
 	var mapUiStyle = countryMapUi.style;
 	mapUiStyle.opacity = 1;
 	currentCountryLanguagesText.style.opacity = 0;

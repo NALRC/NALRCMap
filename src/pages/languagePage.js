@@ -1,6 +1,8 @@
+var currentLanguage;
+
 function openLanguagePage(event){
-	var lang = event.target.innerHTML;
-	languageName.innerHTML = lang;
+	currentLanguage = event.target.innerHTML;
+	languageName.innerHTML = currentLanguage;
 	languageUi.style.width = '730px';
 	languageUi.style.opacity = 1;
 	backToCountryPage.style.opacity = 1;
@@ -10,7 +12,7 @@ function openLanguagePage(event){
 	geojson.eachLayer(function (layer) {
 		var layerCountry = layer.feature.properties.name;
 
-    	if (languageData[lang].countries.includes(layerCountry)) {
+    	if (languageData[currentLanguage].countries.includes(layerCountry)) {
     		layers.push(layer);
         	// Zoom to that layer.
     		//map.flyToBounds(layer.getBounds());
@@ -21,7 +23,8 @@ function openLanguagePage(event){
     //console.log(featureGroup, featureGroup.getBounds())
     map.flyToBounds(featureGroup.getBounds());
 	slideCloseCountryPage();
-	brochureButton.onclick = function(){window.open('https://nalrc.indiana.edu/doc/brochures/'+lang.toLowerCase()+'.pdf')};
+	pageTransition("languagePage");
+	brochureButton.onclick = function(){window.open('https://nalrc.indiana.edu/doc/brochures/'+currentLanguage.toLowerCase()+'.pdf')};
 }
 
 function closeLanguagePage(){
