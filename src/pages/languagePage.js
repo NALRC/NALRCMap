@@ -21,6 +21,7 @@ function openLanguagePage(event){
     //console.log(featureGroup, featureGroup.getBounds())
     map.flyToBounds(featureGroup.getBounds());
 	slideCloseCountryPage();
+	brochureButton.onclick = function(){window.open('https://nalrc.indiana.edu/doc/brochures/'+lang.toLowerCase()+'.pdf')};
 }
 
 function closeLanguagePage(){

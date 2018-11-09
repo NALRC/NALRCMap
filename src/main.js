@@ -6,6 +6,7 @@ var backToCountryMap = document.getElementById("backToCountryMap");
 var languageUi = document.getElementById("languageUi");
 var languageName = document.getElementById("languageName");
 var backToCountryPage = document.getElementById("backToCountryPage");
+var brochureButton = document.getElementById("brochure");
 
 var languageCountryGroups = [];
 

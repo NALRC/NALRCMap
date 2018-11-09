@@ -110,6 +110,19 @@
 	z-index: 6;
 }
 
+#brochure{
+	position: absolute;
+	height: 60px;
+	width: 100px;
+	left: 500px;
+	top: 100px;
+	background-color: #e0e0e0;
+	font-size: 15px;
+	color: #464d59;
+	transition: opacity .2s;
+	z-index: 6;
+}
+
 #languageName{
 	position: absolute;
 	width: 265px;
