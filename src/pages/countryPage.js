@@ -8,7 +8,7 @@ function openToCountryFromMap(country){
         console.log('opening ' + currentCountry);
         createLanguageButtons(country);
         flyToCountry();
-        setTimeout(openCountryPage, 1000);
+        openCountryPage();
         //openCountryPage();
     }
 }

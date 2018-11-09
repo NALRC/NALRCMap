@@ -1,10 +1,12 @@
 //geojson mouse events
 function mouseEnterCountry(e, feature){
     //console.log("entered " + e.target.feature.properties.name)
-    e.target.feature.properties.isMouseOver = true;
-    geojson.resetStyle(e.target);
-    setText(currentCountryNameText, e.target.feature.properties.name_long);
-    setText(currentCountryLanguagesText, formatLanguagesList(e.target.feature.properties.languages));
+    if(currentState == "countryMap"){
+        e.target.feature.properties.isMouseOver = true;
+        geojson.resetStyle(e.target);
+        setText(currentCountryNameText, e.target.feature.properties.name_long);
+        setText(currentCountryLanguagesText, formatLanguagesList(e.target.feature.properties.languages));
+    }
 }
 
 function formatLanguagesList(list){
@@ -17,10 +19,12 @@ function formatLanguagesList(list){
 
 function mouseExitCountry(e, feature){
     //console.log("exited " + e.target.feature.properties.name)
-    e.target.feature.properties.isMouseOver = false;
-    geojson.resetStyle(e.target);
-    setText(currentCountryNameText, "");
-    setText(currentCountryLanguagesText, "");
+    if(currentState == "countryMap"){
+        e.target.feature.properties.isMouseOver = false;
+        geojson.resetStyle(e.target);
+        setText(currentCountryNameText, "");
+        setText(currentCountryLanguagesText, "");
+    }
 }
 
 function clickCountry(e, feature) {
@@ -73,7 +77,7 @@ function pickFillColor(feature){
         color = feature.properties.isSelected ? '#a9c9fc' : '#b5b5b5';
     }if(currentState == "languagePage"){
         var name = feature.properties.name_long;
-        color = languageData[currentLanguage].countries.includes(name) ? '#8cf442' : '#b5b5b5';
+        color = languageData[currentLanguage].countries.includes(name) ? '#0c00ff' : '#b5b5b5';
     }
     return color;
 }
