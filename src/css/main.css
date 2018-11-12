@@ -96,16 +96,30 @@
 	z-index: 3;
 }
 
-#backToCountryPage{
+.languagePageCountryButton{
 	position: absolute;
-	height: 60px;
-	width: 100px;
-	left: 500px;
-	top: 300px;
+	height: 25px;
+	width: 250px;
+	left: 70px;
+	top: 80px;
 	background-color: #e0e0e0;
 	font-size: 15px;
 	color: #464d59;
-	opacity: 0;
+	opacity: 1;
+	transition: opacity .2s;
+	z-index: 6;
+}
+
+.languagePageBookButton{
+	position: absolute;
+	height: 25px;
+	width: 200px;
+	left: 400px;
+	top: 80px;
+	background-color: #e0e0e0;
+	font-size: 15px;
+	color: #464d59;
+	opacity: 1;
 	transition: opacity .2s;
 	z-index: 6;
 }
@@ -115,7 +129,7 @@
 	height: 60px;
 	width: 100px;
 	left: 500px;
-	top: 100px;
+	top: 280px;
 	background-color: #e0e0e0;
 	font-size: 15px;
 	color: #464d59;

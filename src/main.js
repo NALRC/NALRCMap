@@ -5,7 +5,6 @@ var countryMapUi = document.getElementById("countryMapUi");
 var backToCountryMap = document.getElementById("backToCountryMap");
 var languageUi = document.getElementById("languageUi");
 var languageName = document.getElementById("languageName");
-var backToCountryPage = document.getElementById("backToCountryPage");
 var brochureButton = document.getElementById("brochure");
 
 var languageCountryGroups = [];
@@ -47,7 +46,6 @@ for(var language in languageData.languages){
 // }
 
 backToCountryMap.onclick = function(){openCountryMap()};
-backToCountryPage.onclick = function(){closeLanguagePage()};
 //click debouncing
 function pageTransition(destination){
     this.currentState = "transition";
@@ -62,6 +60,19 @@ function setText(p, text){
         return;
     }
     p.innerHTML = text;
+}
+
+function createButtons(btnList, cssclass, data, parent, startTop, topInterval, click){
+    for(var ind in data){
+        var btn = document.createElement("BUTTON");
+        parent.appendChild(btn);
+        btn.className = cssclass;
+        btn.style.top = (startTop + topInterval * ind) + 'px';
+        var text = data[ind];
+        btn.innerHTML = text;
+        btn.onclick = click;
+        btnList.push(btn);
+    }
 }
 
 //leaflet map style

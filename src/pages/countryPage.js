@@ -2,14 +2,8 @@ var languageButtons = [];
 
 function openToCountryFromMap(country){
     if(this.currentState == "countryMap"){
-    	setText(currentCountryNameText, country.properties.name_long);
-        currentCountry = country.properties.name;
-        country.properties.isSelected = true;
-        console.log('opening ' + currentCountry);
-        createLanguageButtons(country);
-        flyToCountry();
+    	currentCountry = country.properties.name;
         openCountryPage();
-        //openCountryPage();
     }
 }
 
@@ -38,7 +32,17 @@ function createLanguageButtons(country){
 }
 
 
-function openCountryPage(){
+function openCountryPage(event){
+	try {currentCountry = event.target.innerHTML;} catch(error){};
+	var country;
+	geojson.eachLayer(function (layer) {
+    	if (layer.feature.properties.name === currentCountry) {
+    		country = layer.feature.properties;
+    	}
+    });
+	createButtons(languageButtons, "toLanguage", country.languages, countryMapUi, 80, 30, openLanguagePage);
+	console.log('opening ' + currentCountry);
+	currentCountryNameText.innerHTML = currentCountry;
 	pageTransition("countryPage");
 	var mapUiStyle = countryMapUi.style;
 	mapUiStyle.opacity = 1;

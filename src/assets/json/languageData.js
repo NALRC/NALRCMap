@@ -1,9 +1,21 @@
 var languageData = {
 	"books":{
-		"speak":["Amharic", "Bamana", "Bemba", "Chichewa", "Arabic", "Hausa", "Kikongo", "Kinyarwanda", "Kirundi", "Lingala", "Ndebele", "Sesotho", "SiSwati", "Swahili", "Tigrinya", "Twi", "Wolof", "Zulu"],
-		"read":["Kinyarwanda", "Shona", "Swahili", "Twi", "Wolof"],
-		"communicate":["Swahili", "Yoruba"],
-		"grammar":["Amharic", "Twi", "Bamana", "Pulaar", "Shona", "Swahili", "Wolof", "Zulu"],
+		"Let's Speak":{
+			"languages":["Amharic", "Bamana", "Bemba", "Chichewa", "Arabic", "Hausa", "Kikongo", "Kinyarwanda", "Kirundi", "Lingala", "Ndebele", "Sesotho", "SiSwati", "Swahili", "Tigrinya", "Twi", "Wolof", "Zulu"],
+			"url":"https://nalrc.indiana.edu/resources/books-media/lets-speak.html"
+		},
+		"Let's Read":{
+			"languages":["Kinyarwanda", "Shona", "Swahili", "Twi", "Wolof"],
+			"url":"https://nalrc.indiana.edu/resources/books-media/lets-read.html"
+		},
+		"Let's Communicate":{
+			"languages":["Swahili", "Yoruba"],
+			"url":"https://nalrc.indiana.edu/resources/books-media/lets-communicate.html"
+		},
+		"Grammar Reference":{
+			"languages":["Amharic", "Twi", "Bamana", "Pulaar", "Shona", "Swahili", "Wolof", "Zulu"],
+			"url":"https://nalrc.indiana.edu/resources/books-media/grammar-reference.html"
+		}
 	},
 	"languages":{
 		"Acholi":{
