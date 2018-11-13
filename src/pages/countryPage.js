@@ -9,7 +9,7 @@ function openToCountryFromMap(country){
 
 function flyToCountry(){
 	geojson.eachLayer(function (layer) {
-    	if (layer.feature.properties.name === currentCountry) {
+    	if (layer.feature.properties.name_long === currentCountry) {
     		map.flyToBounds(layer.getBounds());
     	}
     });
@@ -36,10 +36,11 @@ function openCountryPage(event){
 	try {currentCountry = event.target.innerHTML;} catch(error){};
 	var country;
 	geojson.eachLayer(function (layer) {
-    	if (layer.feature.properties.name === currentCountry) {
+    	if (layer.feature.properties.name_long === currentCountry) {
     		country = layer.feature.properties;
     	}
     });
+    console.log(country)
 	createButtons(languageButtons, "toLanguage", country.languages, countryMapUi, 80, 30, openLanguagePage);
 	console.log('opening ' + currentCountry);
 	currentCountryNameText.innerHTML = currentCountry;
