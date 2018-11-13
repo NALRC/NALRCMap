@@ -4,6 +4,7 @@ var languagePageBookButtons = [];
 
 function openLanguagePage(event){
 	currentLanguage = event.target.innerHTML;
+	console.log(currentLanguage)
 	languageName.innerHTML = currentLanguage;
 	languageUi.style.width = '730px';
 	languageUi.style.opacity = 1;
@@ -35,8 +36,8 @@ function closeLanguagePage(event){
 	languageUi.style.opacity = 0;
 	languageUi.style.pointerEvents = 'none';
 	openCountryPage(event);
-	languagePageCountryButtons = [];
-	languagePageBookButtons = [];
+	destroyButtons(languagePageCountryButtons);
+	destroyButtons(languagePageBookButtons);
 }
 
 function createBookButtons(){

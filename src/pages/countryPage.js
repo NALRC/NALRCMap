@@ -69,10 +69,5 @@ function closePageToMap(){
 	backToCountryMap.style.opacity = 0;
 	//toLanguage.style.opacity = 0;
 	currentCountryLanguagesText.style.opacity = 1;
-
-	//destroy buttons
-	for(var i = 0; i < languageButtons.length; i++){
-		languageButtons[i].remove();
-	}
-	languageButtons = [];
+	destroyButtons(languageButtons);
 }
