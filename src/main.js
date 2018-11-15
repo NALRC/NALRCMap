@@ -6,6 +6,10 @@ var backToCountryMap = document.getElementById("backToCountryMap");
 var languageUi = document.getElementById("languageUi");
 var languageName = document.getElementById("languageName");
 var brochureButton = document.getElementById("brochure");
+var listUi = document.getElementById("listUi");
+
+var countryList = [];
+var languageList = [];
 
 var languageCountryGroups = [];
 
@@ -72,6 +76,27 @@ function createButtons(btnList, cssclass, data, parent, startTop, topInterval, c
         btn.innerHTML = text;
         btn.onclick = click;
         btnList.push(btn);
+    }
+}
+
+function createButtonRows(btnList, cssclass, data, parent, startTop, topInterval, startLeft, leftInterval, numColumn, click){
+    var x = 0;
+    var y = 0;
+    for(var ind in data){
+        var btn = document.createElement("BUTTON");
+        parent.appendChild(btn);
+        btn.className = cssclass;
+        btn.style.top = (startTop + topInterval * y) + 'px';
+        btn.style.left = (startLeft + leftInterval * x) + 'px';
+        var text = data[ind];
+        btn.innerHTML = text;
+        btn.onclick = click;
+        btnList.push(btn);
+        y += 1;
+        if(y >= numColumn){
+            y = 0;
+            x += 1;
+        }
     }
 }
 

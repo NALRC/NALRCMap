@@ -474,7 +474,7 @@ var languageData = {
 			}
 		},
 		"Somali":{
-			"countries":["Somalia", "Djibouti", "Ethiopia", "Yemen", "Kenya"],
+			"countries":["Somalia", "Djibouti", "Ethiopia", "Somaliland", "Kenya"],
 			"text":{
 				"english":"",
 				"target":""

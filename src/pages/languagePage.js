@@ -15,7 +15,6 @@ function openLanguagePage(event){
 		var layerCountry = layer.feature.properties.name_long;
     	if (languageData.languages[currentLanguage].countries.includes(layerCountry)) {
     		layers.push(layer);
-    		console.log("and " + layerCountry)
     	}
 
     });

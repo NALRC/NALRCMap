@@ -2,7 +2,7 @@ var languageButtons = [];
 
 function openToCountryFromMap(country){
     if(this.currentState == "countryMap"){
-    	currentCountry = country.properties.name;
+    	currentCountry = country.properties.name_long;
         openCountryPage();
     }
 }
@@ -40,7 +40,6 @@ function openCountryPage(event){
     		country = layer.feature.properties;
     	}
     });
-    console.log(country)
 	createButtons(languageButtons, "toLanguage", country.languages, countryMapUi, 80, 30, openLanguagePage);
 	console.log('opening ' + currentCountry);
 	currentCountryNameText.innerHTML = currentCountry;
