@@ -11,7 +11,7 @@ function openListPage(){
 	createButtonRows(listButtons, 'listButton', countryList, listUi, 80, 24, 6, 230, 17, closeListTo);
 	for(b in listButtons){
 		listButtons[b].onmouseenter = listButtonMouseOver;
-		listButtons[b].onmouseexit = listButtonMouseExit;
+		listButtons[b].onmouseleave = listButtonMouseExit;
 	}
 }
 
@@ -41,4 +41,5 @@ function listButtonMouseOver(event){
 
 function listButtonMouseExit(){
 	listMouseOverName = "";
+	resetGeoStyles();
 }

@@ -194,7 +194,15 @@
 	opacity: 1;
 	transition: opacity .2s;
 	z-index: 7;
+	background-color: transparent;
+	border: none;
+	outline: none;
 }
+
+.listButton:hover{
+	color: #fffde5;
+}
+
 
 #closeList{
 	position: absolute;
@@ -202,10 +210,16 @@
 	left: 600px;
 	width: 40px;
 	height: 40px;
-	background-color: #e0e0e0;
+	background-color: #ff7279;
 	font-size: 14px;
 	color: #464d59;
 	opacity: 1;
 	transition: opacity .2s;
 	z-index: 7;
+	border: none;
+	outline: none;
+}
+
+#closeList:hover{
+	background-color: #fffde5;
 }
