@@ -71,15 +71,21 @@ function style(feature) {
 
 function pickFillColor(feature){
     var color;
-    //console.log(currentState)
-    if(currentState == "countryMap"){
-        color = feature.properties.isMouseOver ? '#a9c9fc' : '#ffec63';
-    }if(currentState == "countryPage"){
-        var name = feature.properties.name_long;
-        color = name == currentCountry ? '#a9c9fc' : '#b5b5b5';
-    }if(currentState == "languagePage"){
-        var name = feature.properties.name_long;
-        color = languageData.languages[currentLanguage].countries.includes(name) ? '#0c00ff' : '#b5b5b5';
+    switch(feature){
+        case "countryMap":
+            color = feature.properties.isMouseOver ? '#a9c9fc' : '#ffec63';
+            break;
+        case "countryPage":
+            var name = feature.properties.name_long;
+            color = name == currentCountry ? '#a9c9fc' : '#b5b5b5';
+            break;
+        case "languagePage":
+            var name = feature.properties.name_long;
+            color = languageData.languages[currentLanguage].countries.includes(name) ? '#0c00ff' : '#b5b5b5';
+            break;
+        case "list":
+            color = '#ffffff';
+            break;
     }
     return color;
 }

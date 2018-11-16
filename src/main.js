@@ -2,11 +2,14 @@ var currentState = "countryMap";
 var currentCountryNameText = document.getElementById("mouseOverCountryName");
 var currentCountryLanguagesText = document.getElementById("mouseOverCountryLanguages")
 var countryMapUi = document.getElementById("countryMapUi");
+var countryToListButton = document.getElementById("mapToListButton");
 var backToCountryMap = document.getElementById("backToCountryMap");
 var languageUi = document.getElementById("languageUi");
 var languageName = document.getElementById("languageName");
 var brochureButton = document.getElementById("brochure");
 var listUi = document.getElementById("listUi");
+var closeList = document.getElementById("closeList");
+
 
 var countryList = [];
 var languageList = [];
@@ -50,6 +53,9 @@ for(var language in languageData.languages){
 // }
 
 backToCountryMap.onclick = function(){openCountryMap()};
+countryToListButton.onclick = function(){closeMapTo()};
+closeList.onclick = function(){closeListTo()};
+
 //click debouncing
 function pageTransition(destination){
     this.currentState = "transition";
