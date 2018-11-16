@@ -71,26 +71,25 @@ function style(feature) {
 
 function pickFillColor(feature){
     var color;
-    switch(feature){
+    var name = feature.properties.name_long;
+    switch(currentState){
         case "countryMap":
             color = feature.properties.isMouseOver ? '#a9c9fc' : '#ffec63';
             break;
         case "countryPage":
-            var name = feature.properties.name_long;
             color = name == currentCountry ? '#a9c9fc' : '#b5b5b5';
             break;
         case "languagePage":
-            var name = feature.properties.name_long;
             color = languageData.languages[currentLanguage].countries.includes(name) ? '#0c00ff' : '#b5b5b5';
             break;
         case "list":
-            color = '#ffffff';
+            color = name == listMouseOverName ? '#db2e64' : '#ffffff';
             break;
     }
     return color;
 }
 
-function resetStyles(){
+function resetGeoStyles(){
     geojson.eachLayer((geo) =>{
         geojson.resetStyle(geo);
     });

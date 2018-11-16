@@ -61,7 +61,7 @@ function pageTransition(destination){
     this.currentState = "transition";
     setTimeout(() => {
         this.currentState = destination;
-        resetStyles();
+        resetGeoStyles();
     }, 10);
 }
 
