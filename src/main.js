@@ -54,7 +54,7 @@ for(var language in languageData.languages){
 
 backToCountryMap.onclick = function(){openCountryMap()};
 countryToListButton.onclick = function(){closeMapTo()};
-closeList.onclick = function(){closeListTo()};
+closeList.onclick = closeListTo;
 
 //click debouncing
 function pageTransition(destination){
