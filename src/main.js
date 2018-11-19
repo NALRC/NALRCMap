@@ -9,6 +9,8 @@ var languageName = document.getElementById("languageName");
 var brochureButton = document.getElementById("brochure");
 var listUi = document.getElementById("listUi");
 var closeList = document.getElementById("closeList");
+var switchListButton = document.getElementById("switchList");
+var listUiTitle = document.getElementById("listTitle");
 
 
 var countryList = [];
@@ -28,6 +30,7 @@ initializeLayerStates();
 
 //popuate countries with language data
 for(var language in languageData.languages){
+    languageList.push(language);
     var currentLanguageData = languageData.languages[language];
     var lCountries = currentLanguageData.countries;
     var featGroup = [];
@@ -55,6 +58,7 @@ for(var language in languageData.languages){
 backToCountryMap.onclick = function(){openCountryMap()};
 countryToListButton.onclick = function(){closeMapTo()};
 closeList.onclick = closeListTo;
+switchList.onclick = function(){changeListMode()};
 
 //click debouncing
 function pageTransition(destination){
