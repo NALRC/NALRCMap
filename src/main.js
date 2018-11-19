@@ -6,6 +6,7 @@ var countryToListButton = document.getElementById("mapToListButton");
 var backToCountryMap = document.getElementById("backToCountryMap");
 var languageUi = document.getElementById("languageUi");
 var languageName = document.getElementById("languageName");
+var languageToListButton = document.getElementById("languageToListButton")
 var brochureButton = document.getElementById("brochure");
 var listUi = document.getElementById("listUi");
 var closeList = document.getElementById("closeList");
@@ -56,9 +57,10 @@ for(var language in languageData.languages){
 // }
 
 backToCountryMap.onclick = function(){openCountryMap()};
-countryToListButton.onclick = function(){closeMapTo()};
+countryToListButton.onclick = function(){closeCountryUiTo()};
 closeList.onclick = closeListTo;
 switchList.onclick = function(){changeListMode()};
+languageToListButton.onclick = function(){languageToList()};
 
 //click debouncing
 function pageTransition(destination){

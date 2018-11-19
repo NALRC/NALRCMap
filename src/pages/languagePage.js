@@ -23,18 +23,27 @@ function openLanguagePage(event){
 	slideCloseCountryPage();
 	pageTransition("languagePage");
 	createBookButtons();
-	createButtons(languagePageCountryButtons, 'languagePageCountryButton', languageData.languages[currentLanguage].countries, languageUi, 80, 30, closeLanguagePage);
+	createButtons(languagePageCountryButtons, 'languagePageCountryButton', languageData.languages[currentLanguage].countries, languageUi, 80, 30, languageToCountry);
 	brochureButton.onclick = function(){window.open('https://nalrc.indiana.edu/doc/brochures/'+currentLanguage.toLowerCase()+'.pdf')};
 }
 
-function closeLanguagePage(event){
+function languageToCountry(event){
+	closeLanguagePage();
+	openCountryPage(event);
+}
+
+function closeLanguagePage(){
 	languageUi.style.width = '0px';
 	languageName.style.opacity = 0;
 	languageUi.style.opacity = 0;
 	languageUi.style.pointerEvents = 'none';
-	openCountryPage(event);
 	destroyButtons(languagePageCountryButtons);
 	destroyButtons(languagePageBookButtons);
+}
+
+function languageToList(){
+	closeLanguagePage();
+	openListPage('language');
 }
 
 function createBookButtons(){

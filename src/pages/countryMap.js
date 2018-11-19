@@ -10,7 +10,7 @@ function closeCountryMap(){
 	countryMapUi.style.opacity = 0;
 }
 
-function closeMapTo(){
+function closeCountryUiTo(){
 	closeCountryMap();
 	openListPage('country');
 }

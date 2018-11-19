@@ -151,7 +151,7 @@ var languageData = {
 				"target":""
 			}
 		},
-		"Moore & Dioula":{
+		"Moore and Dioula":{
 			"countries":["Burkina Faso"],
 			"text":{
 				"english":"",

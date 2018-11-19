@@ -47,7 +47,7 @@ function openCountryPage(event){
 	var mapUiStyle = countryMapUi.style;
 	mapUiStyle.opacity = 1;
 	currentCountryLanguagesText.style.opacity = 0;
-	countryToListButton.style.opacity = 0;
+	countryToListButton.style.left = '500px';
 	mapUiStyle.width = '730px';
     mapUiStyle.left = '35px';
     flyToCountry();
@@ -67,6 +67,7 @@ function slideCloseCountryPage(){
 function closePageToMap(){
 	countryMapUi.style.width = '255px';
     countryMapUi.style.left = '510px';
+    countryToListButton.style.left = '100px';
 	backToCountryMap.style.opacity = 0;
 	//toLanguage.style.opacity = 0;
 	currentCountryLanguagesText.style.opacity = 1;

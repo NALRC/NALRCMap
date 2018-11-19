@@ -11,7 +11,7 @@ function openListPage(mode){
 	}catch(error){}
 	pageTransition("list");
 	map.flyTo([mainMapCoordinates.x,20], 3.3);
-	listUi.style.opacity = .8;
+	listUi.style.opacity = 1;
 	listUi.style.pointerEvents = 'all';
 	var currentList = listMode == "country" ? countryList : languageList;
 	currentList.sort();
