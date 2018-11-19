@@ -190,7 +190,7 @@
 	left: 0px;
 	background-color: #e0e0e0;
 	font-size: 14px;
-	color: #464d59;
+	color: #fffde5;
 	opacity: 1;
 	transition: opacity .2s;
 	z-index: 7;
@@ -200,7 +200,7 @@
 }
 
 .countryListButton:hover{
-	color: #fffde5;
+	color: #ffbcd2;
 }
 
 .languageListButton{
@@ -211,7 +211,7 @@
 	left: 0px;
 	background-color: #e0e0e0;
 	font-size: 14px;
-	color: #464d59;
+	color: #fffde5;
 	opacity: 1;
 	transition: opacity .2s;
 	z-index: 7;
@@ -221,7 +221,7 @@
 }
 
 .languageListButton:hover{
-	color: #fffde5;
+	color: #ffbcd2;
 }
 
 #closeList{

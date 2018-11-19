@@ -59,34 +59,50 @@ function resetLayerStates(){
 
 //rules for styling of geojson shapes
 function style(feature) {
+    var color = pickFillColor(feature);
     return {
-        fillColor: pickFillColor(feature),
+        fillColor: color.color,
         weight: 2,
         opacity: 1,
-        color: 'white',
+        color: '#91008d',
         dashArray: '3',
-        fillOpacity: 0.7
+        fillOpacity: color.opacity
     };
 }
 
 function pickFillColor(feature){
     var color;
+    var opacity = .8;
     var name = feature.properties.name_long;
     switch(currentState){
         case "countryMap":
             color = feature.properties.isMouseOver ? '#a9c9fc' : '#ffec63';
+            opacity = feature.properties.isMouseOver ? 1 : 0;
             break;
         case "countryPage":
             color = name == currentCountry ? '#a9c9fc' : '#b5b5b5';
+            opacity = name == currentCountry ? 1 : 0;
             break;
         case "languagePage":
             color = languageData.languages[currentLanguage].countries.includes(name) ? '#0c00ff' : '#b5b5b5';
+            opacity = languageData.languages[currentLanguage].countries.includes(name) ? 1 : 0;
             break;
         case "list":
-            color = name == listMouseOverName ? '#db2e64' : '#ffffff';
+            if(listMode == "country"){
+                color = name == listMouseOverName ? '#db2e64' : '#ffffff';
+                opacity = name == listMouseOverName ? 1 : 0;
+            }else{
+                try{
+                    color = languageData.languages[listMouseOverName].countries.includes(name) ? '#db2e64' : '#ffffff';
+                    opacity = languageData.languages[listMouseOverName].countries.includes(name) ? 1 : 0}
+                catch(error){
+                    color = '#ffffff';
+                    opacity = 0;}
+            }
             break;
     }
-    return color;
+    var info = {'color': color, 'opacity': opacity};
+    return info;
 }
 
 function resetGeoStyles(){

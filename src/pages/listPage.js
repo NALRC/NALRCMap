@@ -1,9 +1,14 @@
 
 var listButtons = [];
 var listMouseOverName = "";
-var listMode = "language";
+var listMode = "country";
 
-function openListPage(){
+function openListPage(mode){
+	try{
+		if (mode != null){
+			listMode = mode;
+		}
+	}catch(error){}
 	pageTransition("list");
 	map.flyTo([mainMapCoordinates.x,20], 3.3);
 	listUi.style.opacity = .8;

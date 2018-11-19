@@ -12,5 +12,5 @@ function closeCountryMap(){
 
 function closeMapTo(){
 	closeCountryMap();
-	openListPage();
+	openListPage('country');
 }
