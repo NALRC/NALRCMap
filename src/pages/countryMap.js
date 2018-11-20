@@ -13,4 +13,6 @@ function closeCountryMap(){
 function closeCountryUiTo(){
 	closeCountryMap();
 	openListPage('country');
+	destroyButtons(languageButtons);
+	languageButtons = [];
 }

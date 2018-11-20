@@ -33,6 +33,8 @@ function createLanguageButtons(country){
 
 
 function openCountryPage(event){
+	destroyButtons(languageButtons);
+	languageButtons = [];
 	try {currentCountry = event.target.innerHTML;} catch(error){};
 	var country;
 	geojson.eachLayer(function (layer) {

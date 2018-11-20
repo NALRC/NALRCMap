@@ -39,6 +39,8 @@ function closeLanguagePage(){
 	languageUi.style.pointerEvents = 'none';
 	destroyButtons(languagePageCountryButtons);
 	destroyButtons(languagePageBookButtons);
+	languagePageCountryButtons = [];
+	languagePageBookButtons = [];
 }
 
 function languageToList(){
