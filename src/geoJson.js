@@ -25,10 +25,10 @@ function mouseExitCountry(e, feature){
     //console.log("exited " + e.target.feature.properties.name)
     if(currentState == "countryMap"){
         e.target.feature.properties.isMouseOver = false;
-        geojson.resetStyle(e.target);
         setText(currentCountryNameText, "");
         setText(currentCountryLanguagesText, "");
         languageName.innerHTML = "";
+        resetGeoStyles();
     }
 }
 
