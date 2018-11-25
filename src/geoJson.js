@@ -3,9 +3,13 @@ function mouseEnterCountry(e, feature){
     //console.log("entered " + e.target.feature.properties.name)
     if(currentState == "countryMap"){
         e.target.feature.properties.isMouseOver = true;
-        geojson.resetStyle(e.target);
-        setText(currentCountryNameText, e.target.feature.properties.name_long);
-        setText(currentCountryLanguagesText, formatLanguagesList(e.target.feature.properties.languages));
+        if(mapMode == "country"){
+            setText(currentCountryNameText, e.target.feature.properties.name_long);
+            setText(currentCountryLanguagesText, formatLanguagesList(e.target.feature.properties.languages));
+        }else{    
+            setCurrentLanguageMap(e.target.feature.properties.languages);
+        }
+        resetGeoStyles();
     }
 }
 
@@ -24,11 +28,12 @@ function mouseExitCountry(e, feature){
         geojson.resetStyle(e.target);
         setText(currentCountryNameText, "");
         setText(currentCountryLanguagesText, "");
+        languageName.innerHTML = "";
     }
 }
 
 function clickCountry(e, feature) {
-    openToCountryFromMap(e.target.feature);
+    mapMode == "country" ? openToCountryFromMap(e.target.feature) : openLanguagePage(languageName.innerHTML);
 }
 
 function onEachFeature(feature, layer) {
@@ -74,18 +79,25 @@ function pickFillColor(feature){
     var color;
     var opacity = .8;
     var name = feature.properties.name_long;
+    var langData = languageData.languages;
     switch(currentState){
         case "countryMap":
             color = feature.properties.isMouseOver ? '#a9c9fc' : '#ffec63';
             opacity = feature.properties.isMouseOver ? 1 : 0;
+            if(mapMode == "language"){
+                try{
+                    color = langData[languageName.innerHTML].countries.includes(name) ? '#a9c9fc' : '#ffec63';
+                    opacity = langData[languageName.innerHTML].countries.includes(name) ? 1 : 0;
+                }catch(e){}
+            }
             break;
         case "countryPage":
             color = name == currentCountry ? '#a9c9fc' : '#b5b5b5';
             opacity = name == currentCountry ? 1 : 0;
             break;
         case "languagePage":
-            color = languageData.languages[currentLanguage].countries.includes(name) ? '#0c00ff' : '#b5b5b5';
-            opacity = languageData.languages[currentLanguage].countries.includes(name) ? 1 : 0;
+            color = langData[currentLanguage].countries.includes(name) ? '#0c00ff' : '#b5b5b5';
+            opacity = langData[currentLanguage].countries.includes(name) ? 1 : 0;
             break;
         case "list":
             if(listMode == "country"){
@@ -93,8 +105,8 @@ function pickFillColor(feature){
                 opacity = name == listMouseOverName ? 1 : 0;
             }else{
                 try{
-                    color = languageData.languages[listMouseOverName].countries.includes(name) ? '#db2e64' : '#ffffff';
-                    opacity = languageData.languages[listMouseOverName].countries.includes(name) ? 1 : 0}
+                    color = langData[listMouseOverName].countries.includes(name) ? '#db2e64' : '#ffffff';
+                    opacity = langData[listMouseOverName].countries.includes(name) ? 1 : 0}
                 catch(error){
                     color = '#ffffff';
                     opacity = 0;}

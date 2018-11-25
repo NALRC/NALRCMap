@@ -33,6 +33,7 @@ function createLanguageButtons(country){
 
 
 function openCountryPage(event){
+	closeMapUi();
 	destroyButtons(languageButtons);
 	languageButtons = [];
 	try {currentCountry = event.target.innerHTML;} catch(error){};

@@ -3,13 +3,19 @@ var languagePageCountryButtons = [];
 var languagePageBookButtons = [];
 
 function openLanguagePage(event){
-	currentLanguage = event.target.innerHTML;
+	closeMapUi();
+	languageToListButton.style.left = '500px';
+	backToLanguageMap.style.pointerEvents = 'all';
+	backToLanguageMap.style.opacity = 1;
+	try{currentLanguage = event.target.innerHTML;}
+	catch(error){currentLanguage = event;}
 	console.log("opening " + currentLanguage)
 	languageName.innerHTML = currentLanguage;
 	languageUi.style.width = '730px';
 	languageUi.style.opacity = 1;
 	languageName.style.opacity = 1;
-	languageUi.style.pointerEvents = 'auto';
+	languageUi.style.pointerEvents = 'all';
+	brochureButton.style.pointerEvents = 'all';
 	brochureButton.style.opacity = 1;
 	var layers = [];
 	geojson.eachLayer(function (layer) {
@@ -52,11 +58,11 @@ function closeLanguagePageToMap(){
 	languageUi.style.width = '255px';
 	removeLanguageButtons();
 	brochureButton.style.opacity = 0;
+	backToLanguageMap.style.opacity = 0;
 	languageToListButton.style.left = '100px';
- //    countryToListButton.style.left = '100px';
-	// backToCountryMap.style.opacity = 0;
-	// currentCountryLanguagesText.style.opacity = 1;
-	// countryToListButton.style.opacity = 1;
+	backToLanguageMap.style.pointerEvents = 'none';
+	brochureButton.style.pointerEvents = 'none';
+	languageName.style.opacity = 1;
 }
 
 function languageToList(){
@@ -82,4 +88,18 @@ function openBook(event){
 	var book = event.target.innerHTML;
 	var link = languageData.books[book].url;
 	window.open(link);
+}
+
+function setCurrentLanguageMap(languages){
+	var mostCommon = {'language':"", 'numCountries': 0};
+
+	for(var l in languages){
+		var curL = languages[l];
+		var numOfCountries = languageData.languages[languages[l]].countries.length;
+		if(numOfCountries > mostCommon.numCountries){
+			mostCommon = {'language': curL, 'numCountries': numOfCountries};
+		}
+	}
+
+	languageName.innerHTML = mostCommon.language;
 }

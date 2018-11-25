@@ -1,16 +1,5 @@
 var mapMode = "country";
 
-// function closeCountryMap(){
-// 	countryUi.style.opacity = 0;
-// }
-
-// function closeCountryUiTo(){
-// 	closeCountryMap();
-// 	openListPage('country');
-// 	destroyButtons(languageButtons);
-// 	languageButtons = [];
-// }
-
 function closeMapUi(){
 	mapUi.style.opacity = 0;
 	mapUi.style.pointerEvents = 'none';
