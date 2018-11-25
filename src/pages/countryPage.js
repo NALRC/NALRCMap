@@ -20,7 +20,7 @@ function createLanguageButtons(country){
 	
 	for(var ind in languages){
 		var btn = document.createElement("BUTTON");
-		countryMapUi.appendChild(btn);
+		countryUi.appendChild(btn);
 		btn.className = "toLanguage";
 		btn.style.top = (80 + 30 * ind) + 'px';
 		var language = languages[ind];
@@ -42,12 +42,13 @@ function openCountryPage(event){
     		country = layer.feature.properties;
     	}
     });
-	createButtons(languageButtons, "toLanguage", country.languages, countryMapUi, 80, 30, openLanguagePage);
+	createButtons(languageButtons, "toLanguage", country.languages, countryUi, 80, 30, openLanguagePage);
 	console.log('opening ' + currentCountry);
 	currentCountryNameText.innerHTML = currentCountry;
 	pageTransition("countryPage");
-	var mapUiStyle = countryMapUi.style;
+	var mapUiStyle = countryUi.style;
 	mapUiStyle.opacity = 1;
+	mapUiStyle.pointerEvents = 'all';
 	currentCountryLanguagesText.style.opacity = 0;
 	countryToListButton.style.left = '500px';
 	mapUiStyle.width = '730px';
@@ -60,19 +61,25 @@ function openCountryPage(event){
 }
 
 function slideCloseCountryPage(){
-	var mapUiStyle = countryMapUi.style;
+	var mapUiStyle = countryUi.style;
 	mapUiStyle.opacity = 0;
 	mapUiStyle.left = '765px';
 	mapUiStyle.width = '0px';
 }
 
-function closePageToMap(){
-	countryMapUi.style.width = '255px';
-    countryMapUi.style.left = '510px';
+function closeCountryPageToMap(){
+	countryUi.style.width = '255px';
+    countryUi.style.left = '510px';
     countryToListButton.style.left = '100px';
 	backToCountryMap.style.opacity = 0;
 	//toLanguage.style.opacity = 0;
 	currentCountryLanguagesText.style.opacity = 1;
 	countryToListButton.style.opacity = 1;
 	destroyButtons(languageButtons);
+}
+
+function countryToList(){
+	slideCloseCountryPage();
+	openListPage('country');
+	closeMapUi();
 }

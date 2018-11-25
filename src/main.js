@@ -1,17 +1,19 @@
 var currentState = "countryMap";
 var currentCountryNameText = document.getElementById("mouseOverCountryName");
 var currentCountryLanguagesText = document.getElementById("mouseOverCountryLanguages")
-var countryMapUi = document.getElementById("countryMapUi");
+var countryUi = document.getElementById("countryUi");
 var countryToListButton = document.getElementById("mapToListButton");
 var backToCountryMap = document.getElementById("backToCountryMap");
 var languageUi = document.getElementById("languageUi");
 var languageName = document.getElementById("languageName");
+var backToLanguageMap = document.getElementById("backToLanguageMap");
 var languageToListButton = document.getElementById("languageToListButton")
 var brochureButton = document.getElementById("brochure");
 var listUi = document.getElementById("listUi");
 var closeList = document.getElementById("closeList");
 var switchListButton = document.getElementById("switchList");
 var listUiTitle = document.getElementById("listTitle");
+var changeMapButton = document.getElementById("changeMapButton");
 
 
 var countryList = [];
@@ -47,20 +49,13 @@ for(var language in languageData.languages){
    } 
 }
 
-
-//map.on('click', onMapClick);
-
-// function onMapClick(e) {
-//     if(currentState == "countryPage"){
-//         openCountryMap();
-//     }
-// }
-
-backToCountryMap.onclick = function(){openCountryMap()};
-countryToListButton.onclick = function(){closeCountryUiTo()};
+backToCountryMap.onclick = function(){openMap("country")};
+countryToListButton.onclick = function(){countryToList()};
 closeList.onclick = closeListTo;
 switchList.onclick = function(){changeListMode()};
 languageToListButton.onclick = function(){languageToList()};
+changeMapButton.onclick = function(){switchMapMode()};
+backToLanguageMap.onclick = function(){openMap("language")};
 
 //click debouncing
 function pageTransition(destination){

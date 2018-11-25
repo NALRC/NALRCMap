@@ -40,7 +40,7 @@ function closeListTo(event){
 	var name = event.target.innerHTML;
 	switch(name){
 		case "x":
-			openCountryMap();
+			openMap();
 			break;
 		default:
 			listMode == "country" ? openCountryPage(event) : openLanguagePage(event);

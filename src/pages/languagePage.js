@@ -10,6 +10,7 @@ function openLanguagePage(event){
 	languageUi.style.opacity = 1;
 	languageName.style.opacity = 1;
 	languageUi.style.pointerEvents = 'auto';
+	brochureButton.style.opacity = 1;
 	var layers = [];
 	geojson.eachLayer(function (layer) {
 		var layerCountry = layer.feature.properties.name_long;
@@ -37,15 +38,31 @@ function closeLanguagePage(){
 	languageName.style.opacity = 0;
 	languageUi.style.opacity = 0;
 	languageUi.style.pointerEvents = 'none';
+	removeLanguageButtons();
+}
+
+function removeLanguageButtons(){
 	destroyButtons(languagePageCountryButtons);
 	destroyButtons(languagePageBookButtons);
 	languagePageCountryButtons = [];
 	languagePageBookButtons = [];
 }
 
+function closeLanguagePageToMap(){
+	languageUi.style.width = '255px';
+	removeLanguageButtons();
+	brochureButton.style.opacity = 0;
+	languageToListButton.style.left = '100px';
+ //    countryToListButton.style.left = '100px';
+	// backToCountryMap.style.opacity = 0;
+	// currentCountryLanguagesText.style.opacity = 1;
+	// countryToListButton.style.opacity = 1;
+}
+
 function languageToList(){
 	closeLanguagePage();
 	openListPage('language');
+	closeMapUi();
 }
 
 function createBookButtons(){

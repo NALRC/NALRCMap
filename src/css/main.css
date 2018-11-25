@@ -7,7 +7,21 @@
 	left: 0;
 }
 
-#countryMapUi{
+#changeMapButton{
+	position: absolute;
+	top: 20px;
+	left: 550px;
+	width: 150px;
+	height: 40px;
+	background-color: #ff7279;
+	font-size: 14px;
+	color: #464d59;
+	opacity: 1;
+	transition: opacity .2s;
+	z-index: 7;
+}
+
+#countryUi{
 	position: absolute;
 	height: 430px;
 	width: 255px;
@@ -107,6 +121,20 @@
 	height: 100%;
 	background-color: #d6ffda;
 	z-index: 3;
+}
+
+#backToLanguageMap{
+	position: absolute;
+	height: 60px;
+	width: 100px;
+	left: 500px;
+	top: 300px;
+	background-color: #e0e0e0;
+	font-size: 15px;
+	color: #464d59;
+	opacity: 0;
+	transition: opacity .2s;
+	z-index: 6;
 }
 
 #languageToListButton{
