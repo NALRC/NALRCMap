@@ -14,7 +14,8 @@ var closeList = document.getElementById("closeList");
 var switchListButton = document.getElementById("switchList");
 var listUiTitle = document.getElementById("listTitle");
 var changeMapButton = document.getElementById("changeMapButton");
-
+var welcomePage = document.getElementById("welcomePage");
+var startButton = document.getElementById("startButton");
 
 var countryList = [];
 var languageList = [];
@@ -22,7 +23,7 @@ var languageList = [];
 var languageCountryGroups = [];
 
 var mainMapCoordinates = L.point(1, 38);
-var map = L.map('map', {zoomControl: false, zoomSnap: 0}).setView([mainMapCoordinates.x,mainMapCoordinates.y], 3.3);
+var map = L.map('map', {zoomControl: false, zoomSnap: 0}).setView([mainMapCoordinates.x,mainMapCoordinates.y], 1);
 var geojson;
 geojson = L.geoJson(countryData, {
     onEachFeature: onEachFeature,
@@ -56,6 +57,7 @@ switchList.onclick = function(){changeListMode()};
 languageToListButton.onclick = function(){languageToList()};
 changeMapButton.onclick = function(){switchMapMode()};
 backToLanguageMap.onclick = function(){openMap("language")};
+welcomePage.onclick = function(){closeWelcomePage()};
 
 //click debouncing
 function pageTransition(destination){

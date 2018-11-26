@@ -24,6 +24,8 @@ function openMap(mode){
     languageUi.style.pointerEvents = mapMode == "language" ? 'all' : 'none';
     countryUi.style.pointerEvents = mapMode == "country" ? 'all' : 'none';
     changeMapButton.style.left = mapMode == "country" ? '550px' : '100px';
+    var text = mapMode == "country" ? "Language" : "Country";
+    changeMapButton.innerHTML = "Change to " + text + " Map";
 }
 
 function switchMapMode(){

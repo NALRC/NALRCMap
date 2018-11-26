@@ -313,3 +313,45 @@
 #switchList:hover{
 	background-color: #fffde5;
 }
+
+#welcomePage{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 800px;
+	height: 600px;
+	background-color: #008780;
+	z-index: 10;
+}
+
+#welcomeText{
+	position: absolute;
+	width: 100%;
+	top: 0px;
+	height: 100px;
+	font-size: 30px;
+	color: #ffffff;
+	text-align: center;
+	z-index: 7;
+	font-weight: bold;
+}
+
+#startButton{
+	position: absolute;
+	width: 100%;
+	height: 100px;
+	top: 500px;
+	font-size: 30px;
+	color: #ffffff;
+	text-align: center;
+	z-index: 7;
+	font-weight: bold;
+}
+
+#startLogo{
+	position: absolute;
+	top: 0px;
+	left: 115px;
+	width: 540px;
+	height: 600px;
+}
