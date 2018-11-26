@@ -16,6 +16,7 @@ var listUiTitle = document.getElementById("listTitle");
 var changeMapButton = document.getElementById("changeMapButton");
 var welcomePage = document.getElementById("welcomePage");
 var startButton = document.getElementById("startButton");
+var tickets = document.getElementById("tickets");
 
 var countryList = [];
 var languageList = [];
@@ -58,6 +59,7 @@ languageToListButton.onclick = function(){languageToList()};
 changeMapButton.onclick = function(){switchMapMode()};
 backToLanguageMap.onclick = function(){openMap("language")};
 welcomePage.onclick = function(){closeWelcomePage()};
+tickets.onclick = function(){window.open("https://docs.google.com/document/d/1f-TydDXPLXDVi-X5PD98kBK73nvFInioeL-r_OIGNDY/edit?usp=sharing")};
 
 //click debouncing
 function pageTransition(destination){

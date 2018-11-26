@@ -7,6 +7,11 @@
 	left: 0;
 }
 
+#tickets{
+	position: absolute;
+	top: 650px;
+}
+
 #changeMapButton{
 	position: absolute;
 	top: 20px;
