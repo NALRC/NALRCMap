@@ -23,7 +23,7 @@ var languageList = [];
 
 var languageCountryGroups = [];
 
-var mainMapCoordinates = L.point(1, 38);
+var mainMapCoordinates = L.point(5, 38);
 var map = L.map('map', {zoomControl: false, zoomSnap: 0}).setView([mainMapCoordinates.x,mainMapCoordinates.y], 1);
 var geojson;
 geojson = L.geoJson(countryData, {
