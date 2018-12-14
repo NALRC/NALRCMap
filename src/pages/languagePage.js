@@ -4,7 +4,6 @@ var languagePageBookButtons = [];
 
 function openLanguagePage(event){
 	closeMapUi();
-	languageToListButton.style.left = '500px';
 	backToLanguageMap.style.pointerEvents = 'all';
 	backToLanguageMap.style.opacity = 1;
 	try{currentLanguage = event.target.innerHTML;}
@@ -59,7 +58,6 @@ function closeLanguagePageToMap(){
 	removeLanguageButtons();
 	brochureButton.style.opacity = 0;
 	backToLanguageMap.style.opacity = 0;
-	languageToListButton.style.left = '100px';
 	backToLanguageMap.style.pointerEvents = 'none';
 	brochureButton.style.pointerEvents = 'none';
 	languageName.style.opacity = 1;

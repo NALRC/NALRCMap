@@ -70,7 +70,6 @@ function style(feature) {
         weight: 2,
         opacity: 1,
         color: '#91008d',
-        dashArray: '3',
         fillOpacity: color.opacity
     };
 }

@@ -2,12 +2,11 @@ var currentState = "countryMap";
 var currentCountryNameText = document.getElementById("mouseOverCountryName");
 var currentCountryLanguagesText = document.getElementById("mouseOverCountryLanguages")
 var countryUi = document.getElementById("countryUi");
-var countryToListButton = document.getElementById("mapToListButton");
 var backToCountryMap = document.getElementById("backToCountryMap");
 var languageUi = document.getElementById("languageUi");
 var languageName = document.getElementById("languageName");
 var backToLanguageMap = document.getElementById("backToLanguageMap");
-var languageToListButton = document.getElementById("languageToListButton")
+var mapToListButton = document.getElementById("mapToListButton")
 var brochureButton = document.getElementById("brochure");
 var listUi = document.getElementById("listUi");
 var closeList = document.getElementById("closeList");
@@ -17,6 +16,7 @@ var changeMapButton = document.getElementById("changeMapButton");
 var welcomePage = document.getElementById("welcomePage");
 var startButton = document.getElementById("startButton");
 var tickets = document.getElementById("tickets");
+var topUi = document.getElementById("topUi");
 
 var countryList = [];
 var languageList = [];
@@ -24,6 +24,7 @@ var languageList = [];
 var languageCountryGroups = [];
 
 var mainMapCoordinates = L.point(5, 38);
+var mainMapZoom = 3.2;
 var map = L.map('map', {zoomControl: false, zoomSnap: 0}).setView([mainMapCoordinates.x,mainMapCoordinates.y], 1);
 var geojson;
 geojson = L.geoJson(countryData, {
@@ -52,10 +53,9 @@ for(var language in languageData.languages){
 }
 
 backToCountryMap.onclick = function(){openMap("country")};
-countryToListButton.onclick = function(){countryToList()};
 closeList.onclick = closeListTo;
 switchList.onclick = function(){changeListMode()};
-languageToListButton.onclick = function(){languageToList()};
+mapToListButton.onclick = function(){openListPage()};
 changeMapButton.onclick = function(){switchMapMode()};
 backToLanguageMap.onclick = function(){openMap("language")};
 welcomePage.onclick = function(){closeWelcomePage()};

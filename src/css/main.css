@@ -7,16 +7,145 @@
 	left: 0;
 }
 
-#tickets{
+#topUi{
 	position: absolute;
-	top: 650px;
+	height: 45px;
+	width: 700px;
+	z-index: 5;
+	top: 0;
+	left: 50px;
+}
+
+#mapToListButton{
+	width: 100px;
+	left: 150px;
+	top: 0px;
+}
+
+#infoButton{
+	width: 120px;
+	left: 290px;
+	top: 0px;
+}
+
+#contactUs{
+	width: 100px;
+	left: 450px;
+	top: 0px;
+}
+
+.topUiButton{
+	background-color: #6d0af5;
+	height: 100%;
+	position: absolute;
+	z-index: 6;
+	font-size: 15px;
+	color: #ffffff;
+	border: none;
+	outline: none;
+}
+
+.topUiButton:hover{
+	background-color: #5809c4;
 }
 
 #changeMapButton{
 	position: absolute;
+	top: 45px;
+	left: 500px;
+	width: 200px;
+	height: 30px;
+	background-color: #6d0af5;
+	transition: left 1s;
+	z-index: 7;
+	font-size: 15px;
+	color: #ffffff;
+	border: none;
+	outline: none;
+}
+
+#changeMapButton:hover{
+	background-color: #5809c4;
+}
+
+#listUi{
+	opacity: 0;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 700px;
+	height: 500px;
+	z-index: 6;
+	pointer-events: none;
+}
+
+#listUiBackground{
+	position: absolute;
+	opacity: .7;
+	width: 100%;
+	height: 100%;
+	background-color: #999999;
+	z-index: 3;
+}
+
+#listTitle{
+	position: absolute;
+	width: 100%;
+	height: 100px;
+	font-size: 30px;
+	color: #ffffff;
+	text-align: center;
+	z-index: 7;
+}
+
+.countryListButton{
+	position: absolute;
+	height: 22px;
+	width: 230px;
+	top: 0px;
+	left: 0px;
+	background-color: #e0e0e0;
+	font-size: 14px;
+	color: #fffde5;
+	opacity: 1;
+	transition: opacity .2s;
+	z-index: 7;
+	background-color: transparent;
+	border: none;
+	outline: none;
+}
+
+
+.countryListButton:hover{
+	color: #ffbcd2;
+}
+
+.languageListButton{
+	position: absolute;
+	height: 22px;
+	width: 130px;
+	top: 0px;
+	left: 0px;
+	background-color: #e0e0e0;
+	font-size: 14px;
+	color: #fffde5;
+	opacity: 1;
+	transition: opacity .2s;
+	z-index: 7;
+	background-color: transparent;
+	border: none;
+	outline: none;
+}
+
+.languageListButton:hover{
+	color: #ffbcd2;
+}
+
+#closeList{
+	position: absolute;
 	top: 20px;
-	left: 550px;
-	width: 150px;
+	left: 600px;
+	width: 40px;
 	height: 40px;
 	background-color: #ff7279;
 	font-size: 14px;
@@ -24,7 +153,50 @@
 	opacity: 1;
 	transition: opacity .2s;
 	z-index: 7;
+	border: none;
+	outline: none;
 }
+
+#closeList:hover{
+	background-color: #fffde5;
+}
+
+#switchList{
+	position: absolute;
+	top: 20px;
+	left: 40px;
+	width: 100px;
+	height: 40px;
+	background-color: #ff7279;
+	font-size: 14px;
+	color: #464d59;
+	opacity: 1;
+	transition: opacity .2s;
+	z-index: 7;
+	border: none;
+	outline: none;
+}
+
+#switchList:hover{
+	background-color: #fffde5;
+}
+
+#topUiBackground{
+	background-color: #6f0df2;
+	opacity: .7;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+
+#tickets{
+	position: absolute;
+	top: 650px;
+}
+
 
 #countryUi{
 	position: absolute;
@@ -45,6 +217,7 @@
 	z-index: 3;
 }
 
+
 #backToCountryMap{
 	position: absolute;
 	height: 60px;
@@ -59,18 +232,6 @@
 	z-index: 6;
 }
 
-#mapToListButton{
-	position: absolute;
-	height: 60px;
-	width: 100px;
-	left: 100px;
-	top: 240px;
-	background-color: #e0e0e0;
-	font-size: 15px;
-	color: #464d59;
-	transition: opacity .2s;
-	z-index: 6;
-}
 
 .toLanguage{
 	position: absolute;
@@ -206,118 +367,7 @@
 	z-index: 5;
 }
 
-#listUi{
-	opacity: 0;
-	position: absolute;
-	top: 50px;
-	left: 50px;
-	width: 700px;
-	height: 500px;
-	z-index: 6;
-	pointer-events: none;
-}
 
-#listUiBackground{
-	position: absolute;
-	opacity: .7;
-	width: 100%;
-	height: 100%;
-	background-color: #999999;
-	z-index: 3;
-}
-
-#listTitle{
-	position: absolute;
-	width: 100%;
-	height: 100px;
-	font-size: 30px;
-	color: #ffffff;
-	text-align: center;
-	z-index: 7;
-}
-
-.countryListButton{
-	position: absolute;
-	height: 22px;
-	width: 230px;
-	top: 0px;
-	left: 0px;
-	background-color: #e0e0e0;
-	font-size: 14px;
-	color: #fffde5;
-	opacity: 1;
-	transition: opacity .2s;
-	z-index: 7;
-	background-color: transparent;
-	border: none;
-	outline: none;
-}
-
-
-.countryListButton:hover{
-	color: #ffbcd2;
-}
-
-.languageListButton{
-	position: absolute;
-	height: 22px;
-	width: 130px;
-	top: 0px;
-	left: 0px;
-	background-color: #e0e0e0;
-	font-size: 14px;
-	color: #fffde5;
-	opacity: 1;
-	transition: opacity .2s;
-	z-index: 7;
-	background-color: transparent;
-	border: none;
-	outline: none;
-}
-
-.languageListButton:hover{
-	color: #ffbcd2;
-}
-
-#closeList{
-	position: absolute;
-	top: 20px;
-	left: 600px;
-	width: 40px;
-	height: 40px;
-	background-color: #ff7279;
-	font-size: 14px;
-	color: #464d59;
-	opacity: 1;
-	transition: opacity .2s;
-	z-index: 7;
-	border: none;
-	outline: none;
-}
-
-#closeList:hover{
-	background-color: #fffde5;
-}
-
-#switchList{
-	position: absolute;
-	top: 20px;
-	left: 40px;
-	width: 100px;
-	height: 40px;
-	background-color: #ff7279;
-	font-size: 14px;
-	color: #464d59;
-	opacity: 1;
-	transition: opacity .2s;
-	z-index: 7;
-	border: none;
-	outline: none;
-}
-
-#switchList:hover{
-	background-color: #fffde5;
-}
 
 #welcomePage{
 	position: absolute;
