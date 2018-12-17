@@ -17,11 +17,17 @@ var welcomePage = document.getElementById("welcomePage");
 var startButton = document.getElementById("startButton");
 var tickets = document.getElementById("tickets");
 var topUi = document.getElementById("topUi");
+var infoButton = document.getElementById("infoButton");
+var contactUs = document.getElementById("contactUs");
 
 var countryList = [];
 var languageList = [];
-
 var languageCountryGroups = [];
+var topUiButtons = [];
+topUiButtons.push(infoButton);
+topUiButtons.push(contactUs);
+topUiButtons.push(mapToListButton);
+topUiButtons.push(changeMapButton);
 
 var mainMapCoordinates = L.point(5, 38);
 var mainMapZoom = 3.2;

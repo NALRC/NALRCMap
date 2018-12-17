@@ -4,6 +4,7 @@ var listMouseOverName = "";
 var listMode = "country";
 
 function openListPage(mode){
+	openTopUi();
 	try{
 		if (mode != null){
 			listMode = mode;
@@ -34,6 +35,7 @@ function closeListPage(){
 	listMouseOverName = "";
 	destroyButtons(listButtons)
 	listButtons = [];
+	closeTopUi();
 }
 
 function closeListTo(event){
