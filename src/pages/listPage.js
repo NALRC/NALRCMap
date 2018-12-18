@@ -11,6 +11,7 @@ function openListPage(mode){
 		}
 	}catch(error){}
 	pageTransition("list");
+	listMode = mapMode;
 	map.flyTo([mainMapCoordinates.x,20], 3.3);
 	listUi.style.opacity = 1;
 	listUi.style.pointerEvents = 'all';

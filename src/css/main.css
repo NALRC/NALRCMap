@@ -221,10 +221,10 @@
 
 #backToCountryMap{
 	position: absolute;
-	height: 60px;
-	width: 100px;
-	left: 500px;
-	top: 300px;
+	height: 40px;
+	width: 40px;
+	left: 680px;
+	top: 10px;
 	background-color: #e0e0e0;
 	font-size: 15px;
 	color: #464d59;
@@ -292,10 +292,10 @@
 
 #backToLanguageMap{
 	position: absolute;
-	height: 60px;
-	width: 100px;
-	left: 500px;
-	top: 300px;
+	height: 40px;
+	width: 40px;
+	left: 680px;
+	top: 10px;
 	background-color: #e0e0e0;
 	font-size: 15px;
 	color: #464d59;
