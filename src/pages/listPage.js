@@ -4,15 +4,12 @@ var listMouseOverName = "";
 var listMode = "country";
 
 function openListPage(mode){
-	openTopUi();
 	try{
 		if (mode != null){
 			listMode = mode;
 		}
 	}catch(error){}
 	pageTransition("list");
-	listMode = mapMode;
-	map.flyTo([mainMapCoordinates.x,20], 3.3);
 	listUi.style.opacity = 1;
 	listUi.style.pointerEvents = 'all';
 	var currentList = listMode == "country" ? countryList : languageList;
@@ -23,11 +20,12 @@ function openListPage(mode){
 	var text = listMode == "country" ? "Language" : "Country";
 	switchListButton.innerHTML = "To " + text + " List";
 	text = listMode == "country" ? "Countries" : "Languages";
-	listUiTitle.innerHTML = "List of " + text;
+	topUiTitle.innerHTML = "List of " + text;
 	for(b in listButtons){
 		listButtons[b].onmouseenter = listButtonMouseOver;
 		listButtons[b].onmouseleave = listButtonMouseExit;
 	}
+	openTopUi();
 }
 
 function closeListPage(){
@@ -63,6 +61,7 @@ function listButtonMouseExit(){
 }
 
 function changeListMode(mode){
+	console.log(mode)
 	if(listMode == "country"){
 		listMode = "language";
 	}else{

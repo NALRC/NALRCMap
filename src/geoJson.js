@@ -98,7 +98,7 @@ function pickFillColor(feature){
             color = langData[currentLanguage].countries.includes(name) ? '#0c00ff' : '#b5b5b5';
             opacity = langData[currentLanguage].countries.includes(name) ? 1 : 0;
             break;
-        case "list":
+        case "topUi":
             if(listMode == "country"){
                 color = name == listMouseOverName ? '#db2e64' : '#ffffff';
                 opacity = name == listMouseOverName ? 1 : 0;

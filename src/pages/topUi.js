@@ -29,13 +29,32 @@ function openMap(mode){
     changeMapButton.innerHTML = "Change to " + text + " Map";
 }
 
+function openContactPage(){
+	topUiTitle.innerHTML = "Contact Us";
+	topUiBody.innerHTML = otherContent.contactUs;
+	topUiBody.style.opacity = 1;
+	openTopUi();
+}
+
+function openInfoPage(){
+	topUiTitle.innerHTML = "About / Credits";
+	topUiBody.innerHTML = otherContent.creditInfo;
+	topUiBody.style.opacity = 1;
+	openTopUi();
+}
+
 function openTopUi(){
+	map.flyTo([mainMapCoordinates.x - 3,20], 3.3);
+	pageTransition("topUi");
 	topUi.style.height = '500px';
 	for(b in topUiButtons){
 		var style = topUiButtons[b].style;
 		style.opacity = 0;
 		style.pointerEvents = 'none';
 	}
+	closeTopUiButton.style.opacity = 1;
+	closeTopUiButton.style.pointerEvents = 'all';
+	topUiTitle.style.opacity = 1;
 	slideCloseCountryPage();
 	closeLanguagePage();
 }
@@ -47,6 +66,10 @@ function closeTopUi(){
 		style.opacity = 1;
 		style.pointerEvents = 'all';
 	}
+	closeTopUiButton.style.opacity = 0;
+	closeTopUiButton.style.pointerEvents = 'none';
+    topUiTitle.style.opacity = 0;
+    topUiBody.style.opacity = 0;
 }
 
 function switchMapMode(){

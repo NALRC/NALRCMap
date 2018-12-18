@@ -9,7 +9,7 @@ var backToLanguageMap = document.getElementById("backToLanguageMap");
 var mapToListButton = document.getElementById("mapToListButton")
 var brochureButton = document.getElementById("brochure");
 var listUi = document.getElementById("listUi");
-var closeList = document.getElementById("closeList");
+var closeTopUiButton = document.getElementById("closeTopUiButton");
 var switchListButton = document.getElementById("switchList");
 var listUiTitle = document.getElementById("listTitle");
 var changeMapButton = document.getElementById("changeMapButton");
@@ -59,9 +59,11 @@ for(var language in languageData.languages){
 }
 
 backToCountryMap.onclick = function(){openMap("country")};
-closeList.onclick = closeListTo;
+closeTopUiButton.onclick = closeListTo;
 switchList.onclick = function(){changeListMode()};
-mapToListButton.onclick = function(){openListPage()};
+mapToListButton.onclick = function(){openListPage(mapMode)};
+infoButton.onclick = function(){openInfoPage()};
+contactUs.onclick = function(){openContactPage()};
 changeMapButton.onclick = function(){switchMapMode()};
 backToLanguageMap.onclick = function(){openMap("language")};
 welcomePage.onclick = function(){closeWelcomePage()};

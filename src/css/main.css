@@ -65,6 +65,29 @@
 	outline: none;
 }
 
+#topUiTitle{
+	position: absolute;
+	width: 100%;
+	height: 100px;
+	font-size: 30px;
+	color: #ffffff;
+	text-align: center;
+	z-index: 7;
+	pointer-events: none;
+}
+
+#topUiBody{
+	position: absolute;
+	width: 80%;
+	height: 400px;
+	left: 5%;
+	font-size: 20px;
+	color: #ffffff;
+	z-index: 7;
+	top: 70px;
+	pointer-events: none;
+}
+
 #changeMapButton:hover{
 	background-color: #5809c4;
 }
@@ -89,15 +112,6 @@
 	z-index: 3;
 }
 
-#listTitle{
-	position: absolute;
-	width: 100%;
-	height: 100px;
-	font-size: 30px;
-	color: #ffffff;
-	text-align: center;
-	z-index: 7;
-}
 
 .countryListButton{
 	position: absolute;
@@ -142,7 +156,7 @@
 	color: #ffbcd2;
 }
 
-#closeList{
+#closeTopUiButton{
 	position: absolute;
 	top: 20px;
 	left: 600px;
@@ -151,14 +165,15 @@
 	background-color: #ff7279;
 	font-size: 14px;
 	color: #464d59;
-	opacity: 1;
+	opacity: 0;
 	transition: opacity .2s;
 	z-index: 7;
 	border: none;
 	outline: none;
+	pointer-events: none;
 }
 
-#closeList:hover{
+#closeTopUiButton:hover{
 	background-color: #fffde5;
 }
 
