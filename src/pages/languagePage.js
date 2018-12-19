@@ -16,6 +16,8 @@ function openLanguagePage(event){
 	languageUi.style.pointerEvents = 'all';
 	brochureButton.style.pointerEvents = 'all';
 	brochureButton.style.opacity = 1;
+	languagePageNav.style.opacity = 1;
+	languagePageNav.style.pointerEvents = "all";
 	var layers = [];
 	geojson.eachLayer(function (layer) {
 		var layerCountry = layer.feature.properties.name_long;
@@ -43,6 +45,8 @@ function closeLanguagePage(){
 	languageName.style.opacity = 0;
 	languageUi.style.opacity = 0;
 	languageUi.style.pointerEvents = 'none';
+	languagePageNav.style.opacity = 0;
+	languagePageNav.style.pointerEvents = "none";
 	removeLanguageButtons();
 }
 
@@ -58,9 +62,15 @@ function closeLanguagePageToMap(){
 	removeLanguageButtons();
 	brochureButton.style.opacity = 0;
 	backToLanguageMap.style.opacity = 0;
+	languagePageNav.style.opacity = 0;
+	languagePageNav.style.pointerEvents = "none";
 	backToLanguageMap.style.pointerEvents = 'none';
 	brochureButton.style.pointerEvents = 'none';
 	languageName.style.opacity = 1;
+}
+
+function openPageNum(num){
+	//open the num page its on
 }
 
 function languageToList(){

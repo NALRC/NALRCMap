@@ -6,7 +6,11 @@ var backToCountryMap = document.getElementById("backToCountryMap");
 var languageUi = document.getElementById("languageUi");
 var languageName = document.getElementById("languageName");
 var backToLanguageMap = document.getElementById("backToLanguageMap");
-var mapToListButton = document.getElementById("mapToListButton")
+var languagePageNav = document.getElementById("languageNav");
+var toPage1 = document.getElementById('toPage1');
+var toPage2 = document.getElementById('toPage2');
+var toPage3 = document.getElementById('toPage3');
+var mapToListButton = document.getElementById("mapToListButton");
 var brochureButton = document.getElementById("brochure");
 var listUi = document.getElementById("listUi");
 var closeTopUiButton = document.getElementById("closeTopUiButton");
@@ -68,6 +72,10 @@ changeMapButton.onclick = function(){switchMapMode()};
 backToLanguageMap.onclick = function(){openMap("language")};
 welcomePage.onclick = function(){closeWelcomePage()};
 tickets.onclick = function(){window.open("https://docs.google.com/document/d/1f-TydDXPLXDVi-X5PD98kBK73nvFInioeL-r_OIGNDY/edit?usp=sharing")};
+toPage1.onclick = function(){openPageNum(1)};
+toPage2.onclick = function(){openPageNum(2)};
+toPage3.onclick = function(){openPageNum(3)};
+
 
 //click debouncing
 function pageTransition(destination){
