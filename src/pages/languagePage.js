@@ -5,6 +5,7 @@ var languagePageBookButtons = [];
 
 function openLanguagePage(event){
 	closeMapUi();
+	openLanguagePageNum(0);
 	backToLanguageMap.style.pointerEvents = 'all';
 	backToLanguageMap.style.opacity = 1;
 	try{currentLanguage = event.target.innerHTML;}
@@ -77,9 +78,12 @@ function openLanguagePageNum(num){
 		if(num == page){
 			languagePages[page].style.opacity = 1;
 			languagePages[page].style.pointerEvents = 'all';
+			languagePageButtons[page].className = "languageNavButtonActive";
+
 		}else{
 			languagePages[page].style.opacity = 0;
 			languagePages[page].style.pointerEvents = 'none';
+			languagePageButtons[page].className = "languageNavButton";
 		}
 	}
 }

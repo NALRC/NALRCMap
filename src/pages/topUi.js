@@ -1,4 +1,4 @@
-var mapMode = "country";
+var topUiMode;
 
 
 function closeMapUi(){
@@ -6,30 +6,8 @@ function closeMapUi(){
 	topUi.style.pointerEvents = 'none';
 }
 
-function openMap(mode){
-	try{
-		if(mode != null){
-			mapMode = mode;
-		}
-	}catch(error){}
-	topUi.style.opacity = 1;
-	topUi.style.pointerEvents = 'all';
-	var long = mapMode == "country" ? mainMapCoordinates.y : -5;
-	map.flyTo([mainMapCoordinates.x,long], mainMapZoom);
-    resetLayerStates();
-    pageTransition("countryMap");
-    countryUi.style.opacity = mapMode == "country" ? 1 : 0;
-    languageUi.style.opacity = mapMode == "language" ? 1 : 0;
-    closeCountryPageToMap();
-    closeLanguagePageToMap();
-    languageUi.style.pointerEvents = mapMode == "language" ? 'all' : 'none';
-    countryUi.style.pointerEvents = mapMode == "country" ? 'all' : 'none';
-    changeMapButton.style.left = mapMode == "country" ? '500px' : '0px';
-    var text = mapMode == "country" ? "Language" : "Country";
-    changeMapButton.innerHTML = "Change to " + text + " Map";
-}
-
 function openContactPage(){
+	topUiMode = "contact";
 	topUiTitle.innerHTML = "Contact Us";
 	topUiBody.innerHTML = otherContent.contactUs;
 	topUiBody.style.opacity = 1;
@@ -37,6 +15,7 @@ function openContactPage(){
 }
 
 function openInfoPage(){
+	topUiMode = "info";
 	topUiTitle.innerHTML = "About / Credits";
 	topUiBody.innerHTML = otherContent.creditInfo;
 	topUiBody.style.opacity = 1;
@@ -75,4 +54,23 @@ function closeTopUi(){
 function switchMapMode(){
 	mapMode = mapMode == "country" ? "language" : "country";
 	openMap();
+}
+
+function closeTopUiTo(event){
+	var name = event.target.innerHTML;
+	if(topUiMode == "list"){
+		switch(name){
+			case "x":
+				openMap(listMode);
+				break;
+			default:
+				listMode == "country" ? openCountryPage(event) : openLanguagePage(event);
+				break;
+		}
+		closeListPage();
+	}
+	else{
+		openMap(mapMode);
+		closeTopUi();
+	}
 }

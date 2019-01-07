@@ -10,6 +10,7 @@ var languagePageNav = document.getElementById("languageNav");
 var toPage1 = document.getElementById('toPage1');
 var toPage2 = document.getElementById('toPage2');
 var toPage3 = document.getElementById('toPage3');
+var languagePageButtons = [toPage1, toPage2, toPage3];
 var languagePage1 = document.getElementById('languagePage1');
 var languagePage2 = document.getElementById('languagePage2');
 var languagePage3 = document.getElementById('languagePage3');
@@ -39,7 +40,7 @@ topUiButtons.push(mapToListButton);
 topUiButtons.push(changeMapButton);
 
 
-
+var mapMode = "country";
 var mainMapCoordinates = L.point(5, 38);
 var mainMapZoom = 3.2;
 var map = L.map('map', {zoomControl: false, zoomSnap: 0}).setView([mainMapCoordinates.x,mainMapCoordinates.y], 1);
@@ -70,7 +71,7 @@ for(var language in languageData.languages){
 }
 
 backToCountryMap.onclick = function(){openMap("country")};
-closeTopUiButton.onclick = closeListTo;
+closeTopUiButton.onclick = closeTopUiTo;
 switchList.onclick = function(){changeListMode()};
 mapToListButton.onclick = function(){openListPage(mapMode)};
 infoButton.onclick = function(){openInfoPage()};
@@ -91,6 +92,29 @@ function pageTransition(destination){
         this.currentState = destination;
         resetGeoStyles();
     }, 10);
+}
+
+function openMap(mode){
+    try{
+        if(mode != null){
+            mapMode = mode;
+        }
+    }catch(error){}
+    topUi.style.opacity = 1;
+    topUi.style.pointerEvents = 'all';
+    var long = mapMode == "country" ? mainMapCoordinates.y : -5;
+    map.flyTo([mainMapCoordinates.x,long], mainMapZoom);
+    resetLayerStates();
+    pageTransition("countryMap");
+    countryUi.style.opacity = mapMode == "country" ? 1 : 0;
+    languageUi.style.opacity = mapMode == "language" ? 1 : 0;
+    closeCountryPageToMap();
+    closeLanguagePageToMap();
+    languageUi.style.pointerEvents = mapMode == "language" ? 'all' : 'none';
+    countryUi.style.pointerEvents = mapMode == "country" ? 'all' : 'none';
+    changeMapButton.style.left = mapMode == "country" ? '500px' : '0px';
+    var text = mapMode == "country" ? "Language" : "Country";
+    changeMapButton.innerHTML = "Change to " + text + " Map";
 }
 
 function setText(p, text){

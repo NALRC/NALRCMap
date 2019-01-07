@@ -53,6 +53,15 @@
 	background-color: #d7e510;
 }
 
+.languageNavButtonActive{
+	position: absolute;
+	width: 33%;
+	height: 100%;
+	border: none;
+	outline: none;
+	background-color: #f49e42;
+}
+
 .languageNavButton:hover{
 	background-color: #22e510;
 }
