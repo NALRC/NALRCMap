@@ -10,6 +10,10 @@ var languagePageNav = document.getElementById("languageNav");
 var toPage1 = document.getElementById('toPage1');
 var toPage2 = document.getElementById('toPage2');
 var toPage3 = document.getElementById('toPage3');
+var languagePage1 = document.getElementById('languagePage1');
+var languagePage2 = document.getElementById('languagePage2');
+var languagePage3 = document.getElementById('languagePage3');
+var languagePages = [languagePage1, languagePage2, languagePage3];
 var mapToListButton = document.getElementById("mapToListButton");
 var brochureButton = document.getElementById("brochure");
 var listUi = document.getElementById("listUi");
@@ -24,6 +28,7 @@ var topUi = document.getElementById("topUi");
 var infoButton = document.getElementById("infoButton");
 var contactUs = document.getElementById("contactUs");
 
+
 var countryList = [];
 var languageList = [];
 var languageCountryGroups = [];
@@ -32,6 +37,8 @@ topUiButtons.push(infoButton);
 topUiButtons.push(contactUs);
 topUiButtons.push(mapToListButton);
 topUiButtons.push(changeMapButton);
+
+
 
 var mainMapCoordinates = L.point(5, 38);
 var mainMapZoom = 3.2;
@@ -72,9 +79,9 @@ changeMapButton.onclick = function(){switchMapMode()};
 backToLanguageMap.onclick = function(){openMap("language")};
 welcomePage.onclick = function(){closeWelcomePage()};
 tickets.onclick = function(){window.open("https://docs.google.com/document/d/1f-TydDXPLXDVi-X5PD98kBK73nvFInioeL-r_OIGNDY/edit?usp=sharing")};
-toPage1.onclick = function(){openPageNum(1)};
-toPage2.onclick = function(){openPageNum(2)};
-toPage3.onclick = function(){openPageNum(3)};
+toPage1.onclick = function(){openLanguagePageNum(0)};
+toPage2.onclick = function(){openLanguagePageNum(1)};
+toPage3.onclick = function(){openLanguagePageNum(2)};
 
 
 //click debouncing
