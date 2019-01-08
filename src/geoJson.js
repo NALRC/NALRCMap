@@ -24,7 +24,8 @@ function formatLanguagesList(list){
 function mouseExitCountry(e, feature){
     //console.log("exited " + e.target.feature.properties.name)
     if(currentState == "countryMap"){
-        e.target.feature.properties.isMouseOver = false;
+        try{e.target.feature.properties.isMouseOver = false;}catch(e){};
+        currentLanguage = "";
         setText(currentCountryNameText, "");
         setText(currentCountryLanguagesText, "");
         languageName.innerHTML = "";

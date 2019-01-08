@@ -3,6 +3,7 @@ var languagePageCountryButtons = [];
 var languagePageBookButtons = [];
 
 
+
 function openLanguagePage(event){
 	closeMapUi();
 	openLanguagePageNum(0);
@@ -11,6 +12,7 @@ function openLanguagePage(event){
 	try{currentLanguage = event.target.innerHTML;}
 	catch(error){currentLanguage = event;}
 	console.log("opening " + currentLanguage)
+
 	languageName.innerHTML = currentLanguage;
 	languageUi.style.width = '730px';
 	languageUi.style.opacity = 1;
@@ -37,19 +39,31 @@ function openLanguagePage(event){
 	brochureButton.onclick = function(){window.open('https://nalrc.indiana.edu/doc/brochures/'+currentLanguage.toLowerCase()+'.pdf')};
 }
 
+function playLanguageAudio(){
+	if(languageRecording.paused){
+		languageRecording.play();
+	}else{
+		languageRecording.pause();
+	}
+}
+
 function languageToCountry(event){
 	closeLanguagePage();
 	openCountryPage(event);
 }
 
 function closeLanguagePage(){
-	openLanguagePageNum(0);
 	languageUi.style.width = '0px';
 	languageName.style.opacity = 0;
 	languageUi.style.opacity = 0;
 	languageUi.style.pointerEvents = 'none';
 	languagePageNav.style.opacity = 0;
 	languagePageNav.style.pointerEvents = "none";
+	for(var page in languagePages){
+		languagePages[page].style.opacity = 0;
+		languagePages[page].style.pointerEvents = 'none';
+		languagePageButtons[page].className = "languageNavButton";
+	}
 	removeLanguageButtons();
 }
 
@@ -61,7 +75,6 @@ function removeLanguageButtons(){
 }
 
 function closeLanguagePageToMap(){
-	openLanguagePageNum(0);
 	languageUi.style.width = '255px';
 	removeLanguageButtons();
 	brochureButton.style.opacity = 0;
@@ -71,6 +84,11 @@ function closeLanguagePageToMap(){
 	backToLanguageMap.style.pointerEvents = 'none';
 	brochureButton.style.pointerEvents = 'none';
 	languageName.style.opacity = 1;
+	for(var page in languagePages){
+		languagePages[page].style.opacity = 0;
+		languagePages[page].style.pointerEvents = 'none';
+		languagePageButtons[page].className = "languageNavButton";
+	}
 }
 
 function openLanguagePageNum(num){

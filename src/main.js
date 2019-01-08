@@ -15,6 +15,8 @@ var languagePage1 = document.getElementById('languagePage1');
 var languagePage2 = document.getElementById('languagePage2');
 var languagePage3 = document.getElementById('languagePage3');
 var languagePages = [languagePage1, languagePage2, languagePage3];
+var playAudioButton = document.getElementById('playAudioButton');
+var languageRecording = document.getElementById('languageRecording');
 var mapToListButton = document.getElementById("mapToListButton");
 var brochureButton = document.getElementById("brochure");
 var listUi = document.getElementById("listUi");
@@ -83,15 +85,16 @@ tickets.onclick = function(){window.open("https://docs.google.com/document/d/1f-
 toPage1.onclick = function(){openLanguagePageNum(0)};
 toPage2.onclick = function(){openLanguagePageNum(1)};
 toPage3.onclick = function(){openLanguagePageNum(2)};
+playAudioButton.onclick = function(){playLanguageAudio()};
 
 
 //click debouncing
 function pageTransition(destination){
-    this.currentState = "transition";
-    setTimeout(() => {
+    //this.currentState = "transition";
+    //setTimeout(() => {
         this.currentState = destination;
         resetGeoStyles();
-    }, 10);
+    //}, 10);
 }
 
 function openMap(mode){
@@ -104,6 +107,7 @@ function openMap(mode){
     topUi.style.pointerEvents = 'all';
     var long = mapMode == "country" ? mainMapCoordinates.y : -5;
     map.flyTo([mainMapCoordinates.x,long], mainMapZoom);
+
     resetLayerStates();
     pageTransition("countryMap");
     countryUi.style.opacity = mapMode == "country" ? 1 : 0;
@@ -115,6 +119,7 @@ function openMap(mode){
     changeMapButton.style.left = mapMode == "country" ? '500px' : '0px';
     var text = mapMode == "country" ? "Language" : "Country";
     changeMapButton.innerHTML = "Change to " + text + " Map";
+     mouseExitCountry();
 }
 
 function setText(p, text){
