@@ -12,12 +12,13 @@ function openLanguagePage(event){
 	try{currentLanguage = event.target.innerHTML;}
 	catch(error){currentLanguage = event;}
 	console.log("opening " + currentLanguage)
-
 	languageName.innerHTML = currentLanguage;
 	languageUi.style.width = '730px';
 	languageUi.style.opacity = 1;
 	languageName.style.opacity = 1;
 	languageUi.style.pointerEvents = 'all';
+	englishText.innerHTML = languageData.languages['Yoruba'].text.english;
+	targetText.innerHTML = languageData.languages['Yoruba'].text.targetLanguage;
 	brochureButton.style.pointerEvents = 'all';
 	brochureButton.style.opacity = 1;
 	languagePageNav.style.opacity = 1;

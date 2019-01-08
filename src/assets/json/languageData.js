@@ -22,7 +22,7 @@ var languageData = {
 			"countries":["Kenya","Uganda","South Sudan"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"1,527,000"
 		},
@@ -30,7 +30,7 @@ var languageData = {
 			"countries":["Ethiopia","Eritrea","Djibouti"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"1,973,800"
 		},
@@ -38,7 +38,7 @@ var languageData = {
 			"countries":["South Africa","Botswana","Lesotho","Malawi"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"17,525,880"
 		},
@@ -46,7 +46,7 @@ var languageData = {
 			"countries":["Ethiopia","Djibouti","Egypt"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"25,873,820"
 		},
@@ -54,7 +54,7 @@ var languageData = {
 			"countries":["Algeria","Chad", "Djibouti", "Egypt", "Eritrea", "Libya", "Mauritania", "Morocco", "Somalia", "Somaliland", "Sudan", "Tunisia", "Western Sahara"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"273,989,700"
 		},
@@ -62,7 +62,7 @@ var languageData = {
 			"countries":["Mali", "Côte d'Ivoire", "Burkina Faso", "Senegal", "Sierra Leone", "Liberia", "Guinea"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"14,102,320"
 		},
@@ -70,7 +70,7 @@ var languageData = {
 			"countries":["Cameroon"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"623,200"
 		},
@@ -78,7 +78,7 @@ var languageData = {
 			"countries":["Côte d'Ivoire"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"3,544,060"
 		},
@@ -86,7 +86,7 @@ var languageData = {
 			"countries":["Côte d'Ivoire", "Liberia", "Sierra Leone"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"653,730"
 		},
@@ -94,7 +94,7 @@ var languageData = {
 			"countries":["Zambia"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"4,110,000"
 		},
@@ -102,7 +102,7 @@ var languageData = {
 			"countries":["Zambia","Mozambique","Zimbabwe", "Malawi", "Botswana"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"9,690,520"
 		},
@@ -110,7 +110,7 @@ var languageData = {
 			"countries":["Democratic Republic of the Congo", "Angola", "Zambia"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"977,700"
 		},
@@ -118,7 +118,7 @@ var languageData = {
 			"countries":["South Sudan", "Sudan"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"1,352,120"
 		},
@@ -126,7 +126,7 @@ var languageData = {
 			"countries":["Nigeria"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"1,820,000"
 		},
@@ -134,7 +134,7 @@ var languageData = {
 			"countries":["Nigeria"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"1,641,670"
 		},
@@ -142,7 +142,7 @@ var languageData = {
 			"countries":["Ghana", "Togo", "Benin"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"4,685,760"
 		},
@@ -150,7 +150,7 @@ var languageData = {
 			"countries":["Equatorial Guinea", "Gabon", "Republic of Congo", "Cameroon"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"1,106,100"
 		},
@@ -158,7 +158,7 @@ var languageData = {
 			"countries":["Benin","Togo","Nigeria"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"1,935,500"
 		},
@@ -166,7 +166,7 @@ var languageData = {
 			"countries":["Burkina Faso", "Mali", "Togo"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"6,360,000"
 		},
@@ -174,7 +174,7 @@ var languageData = {
 			"countries":["Central African Republic", "Democratic Republic of the Congo", "Republic of Congo", "Cameroon"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"857,500"
 		},
@@ -182,7 +182,7 @@ var languageData = {
 			"countries":["Benin","Burkina Faso","Cameroon","Central African Republic", "Chad", "Congo", "Eritrea", "Ghana", "Niger", "Sudan", "Togo", "Nigeria"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":" 63,154,100"
 		},
@@ -190,7 +190,7 @@ var languageData = {
 			"countries":["Nigeria"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"600,000"
 		},
@@ -198,7 +198,7 @@ var languageData = {
 			"countries":["Nigeria"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"27,012,190"
 		},
@@ -206,7 +206,7 @@ var languageData = {
 			"countries":["South Africa", "Zimbabwe", "Lesotho"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"19,169,300"
 		},
@@ -214,7 +214,7 @@ var languageData = {
 			"countries":["Kenya", "Tanzania"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"4,493,000"
 		},
@@ -222,7 +222,7 @@ var languageData = {
 			"countries":["Angola", "Democratic Republic of the Congo", "Republic of Congo"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"5,000,000"
 		},
@@ -230,7 +230,7 @@ var languageData = {
 			"countries":["Kenya", "Tanzania", "Uganda"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"6,623,000"
 		},
@@ -238,7 +238,7 @@ var languageData = {
 			"countries":["Angola"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"6,000,000"
 		},
@@ -246,7 +246,7 @@ var languageData = {
 			"countries":["Democratic Republic of the Congo", "Uganda", "Burundi", "Tanzania"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"12,120,250"
 		},
@@ -254,7 +254,7 @@ var languageData = {
 			"countries":["Burundi", "Tanzania", "Democratic Republic of the Congo"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"10,762,850"
 		},
@@ -262,7 +262,7 @@ var languageData = {
 			"countries":["Liberia"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"1,220,000"
 		},
@@ -270,7 +270,7 @@ var languageData = {
 			"countries":["Sierra Leone"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"6,976,110"
 		},
@@ -278,7 +278,7 @@ var languageData = {
 			"countries":["Liberia", "Côte d'Ivoire"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"31,450"
 		},
@@ -286,7 +286,7 @@ var languageData = {
 			"countries":["Uganda"],
 			"text":{
 				"english":"",
-				"target":"2,130,000"
+				"targetLanguage":"2,130,000"
 			},
 			"population":""
 		},
@@ -294,7 +294,7 @@ var languageData = {
 			"countries":["Democratic Republic of the Congo", "Angola" ,"Central African Republic"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"2,260,520"
 		},
@@ -302,7 +302,7 @@ var languageData = {
 			"countries":["Democratic Republic of the Congo"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"8,570,000"
 		},
@@ -310,7 +310,7 @@ var languageData = {
 			"countries":["Uganda"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"6,564,750"
 		},
@@ -318,7 +318,7 @@ var languageData = {
 			"countries":["Kenya", "Tanzania"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"1,524,000"
 		},
@@ -326,7 +326,7 @@ var languageData = {
 			"countries":["Mozambique", "Tanzania", "Malawi"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"3,590,000"
 		},
@@ -334,7 +334,7 @@ var languageData = {
 			"countries":["Tanzania", "Malawi", "Kenya"],
 			"text":{
 				"english":"",
-				"target":"1,470,000"
+				"targetLanguage":"1,470,000"
 			},
 			"population":""
 		},
@@ -342,7 +342,7 @@ var languageData = {
 			"countries":["Madagascar"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"18,138,380"
 		},
@@ -350,7 +350,7 @@ var languageData = {
 			"countries":["Senegal", "The Gambia", "Guinea", "Guinea-Bissau"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"1,325,000"
 		},
@@ -358,7 +358,7 @@ var languageData = {
 			"countries":["Uganda"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"1,650,000"
 		},
@@ -366,7 +366,7 @@ var languageData = {
 			"countries":["Sierra Leone", "Liberia"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"1,976,000"
 		},
@@ -374,7 +374,7 @@ var languageData = {
 			"countries":["Kenya"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"1,660,000"
 		},
@@ -382,7 +382,7 @@ var languageData = {
 			"countries":["Namibia", "Botswana", "South Africa"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"202,200"
 		},
@@ -390,7 +390,7 @@ var languageData = {
 			"countries":["Zimbabwe", "Botswana"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"1,634,800"
 		},
@@ -398,7 +398,7 @@ var languageData = {
 			"countries":["Sudan", "Egypt"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"196,000"
 		},
@@ -406,7 +406,7 @@ var languageData = {
 			"countries":["South Sudan", "Ethiopia"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"894,120"
 		},
@@ -414,7 +414,7 @@ var languageData = {
 			"countries":["Nigeria"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"1,000,000"
 		},
@@ -422,7 +422,7 @@ var languageData = {
 			"countries":["Ethiopia", "Kenya", "Somalia", "Egypt"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"17,465,900"
 		},
@@ -430,7 +430,7 @@ var languageData = {
 			"countries":["Angola", "Namibia"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"1,481,000"
 		},
@@ -438,7 +438,7 @@ var languageData = {
 			"countries":["Guinea", "Guinea-Bissau", "Senegal", "The Gambia", "Mali", "Mauritania"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"4,476,000"
 		},
@@ -446,7 +446,7 @@ var languageData = {
 			"countries":["Uganda"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"3,420,000"
 		},
@@ -454,7 +454,7 @@ var languageData = {
 			"countries":["Central African Republic", "Chad", "Democratic Republic of the Congo"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"5,199,000"
 		},
@@ -462,7 +462,7 @@ var languageData = {
 			"countries":["Côte d'Ivoire", "Mali", "Burkina Faso", "Ghana"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"173,000"
 		},
@@ -470,7 +470,7 @@ var languageData = {
 			"countries":["South Africa"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"13,731,000"
 		},
@@ -478,7 +478,7 @@ var languageData = {
 			"countries":["The Gambia", "Senegal"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"1,410,700"
 		},
@@ -486,7 +486,7 @@ var languageData = {
 			"countries":["South Africa", "Lesotho"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"13,874,520"
 		},
@@ -494,7 +494,7 @@ var languageData = {
 			"countries":["Botswana", "South Africa", "Namibia", "Zimbabwe"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"13,664,710"
 		},
@@ -502,7 +502,7 @@ var languageData = {
 			"countries":["Zimbabwe", "Mozambique", "Botswana", "Zambia"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"9,026,290"
 		},
@@ -510,7 +510,7 @@ var languageData = {
 			"countries":["Ethiopia"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"3,081,000"
 		},
@@ -518,7 +518,7 @@ var languageData = {
 			"countries":["South Africa", "Lesotho", "Mozambique", "Eswatini"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"4,834,200"
 		},
@@ -526,7 +526,7 @@ var languageData = {
 			"countries":["Uganda"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"2,960,000"
 		},
@@ -534,7 +534,7 @@ var languageData = {
 			"countries":["Somalia", "Djibouti", "Ethiopia", "Somaliland", "Kenya"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"16,224,000"
 		},
@@ -542,7 +542,7 @@ var languageData = {
 			"countries":["Côte d'Ivoire", "The Gambia", "Guinea-Bissau", "Mali", "Senegal", "Mauritania"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"1,280,000"
 		},
@@ -550,7 +550,7 @@ var languageData = {
 			"countries":["Guinea", "Guinea-Bissau", "Senegal", "Sierra Leone"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"1,250,110"
 		},
@@ -558,7 +558,7 @@ var languageData = {
 			"countries":["Tanzania", "Burundi", "Democratic Republic of the Congo", "Kenya", "Mozambique", "Rwanda", "Somalia", "South Africa", "Uganda"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"98,310,110"
 		},
@@ -566,7 +566,7 @@ var languageData = {
 			"countries":["Algeria", "Morocco"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"4,740,000"
 		},
@@ -574,7 +574,7 @@ var languageData = {
 			"countries":["Sierra Leone"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"1,870,000"
 		},
@@ -582,7 +582,7 @@ var languageData = {
 			"countries":["Kenya", "Uganda"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"2,699,000"
 		},
@@ -590,7 +590,7 @@ var languageData = {
 			"countries":["Eritrea", "Ethiopia"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"7,655,200"
 		},
@@ -598,7 +598,7 @@ var languageData = {
 			"countries":["Nigeria"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"4,000,000"
 		},
@@ -606,7 +606,7 @@ var languageData = {
 			"countries":["Zambia", "Zimbabwe"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"1,530,000"
 		},
@@ -614,7 +614,7 @@ var languageData = {
 			"countries":["South Africa", "Zimbabwe", "Mozambique", "Eswatini"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"8,900,000"
 		},
@@ -622,7 +622,7 @@ var languageData = {
 			"countries":["Malawi", "Zambia", "Tanzania"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"1,546,000"
 		},
@@ -630,7 +630,7 @@ var languageData = {
 			"countries":["Ghana", "Côte d'Ivoire"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"9,231,300"
 		},
@@ -638,7 +638,7 @@ var languageData = {
 			"countries":["Angola"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"6,000,000"
 		},
@@ -646,7 +646,7 @@ var languageData = {
 			"countries":["South Africa", "Zimbabwe"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"3,001,400"
 		},
@@ -654,15 +654,15 @@ var languageData = {
 			"countries":["Senegal", "The Gambia", "Mauritania"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"5,267,290"
 		},
 		"Yoruba":{
 			"countries":["Nigeria", "Benin", "Togo"],
 			"text":{
-				"english":"",
-				"target":""
+				"english":"Yoruba is the first language of approximately 30 million West Africans, and is spoken by populations in Southwestern Nigeria, in Togo, Benin and Sierra Leone. It is also one of the prominent languages and cultures of the diaspora, and greatly impacts the social, cultural and religious lives of people in countries outside Africa such as Brazil, Venezuela, Cuba, Trinidad and Tobago, and Haiti. Yoruba culture, which centers on religion, is one of the surviving African elements in these countries, as one can clearly see in the orisha tradition of candomble and the features of syncretism in Brazil, as well as in other religious practices in the United States and elsewhere.",
+				"targetLanguage":"Yorùbá jẹ́ èdè abínibí fún àwọn ènìyàn tí ó tó ọgbọ̀n mílíọ̀nù ní ìwò oòrùn Áfíríkà. Ó jẹ́ ọ̀kan gbòógì nínú àwọn èdè tí ó wà ní orílẹ̀-èdè Nàìjíríyà. Wọ́n tún sọ èdè Yorùbá ní orílẹ̀-èdè Togo, Benin àti Sierra Leone. Yorùbá tún jẹ́ èdè àti àṣà tó gbajúmọ̀ láàrín àwọn ènìyàn dúdú ní ilẹ̀ òkèrè bíi Brazil, Venezuela, Cuba, Trinidad àti Tobago, àti Haiti. Àṣà Yorùbá, pàápàá àwọn tó ní ṣe pèlú ẹ̀sìn àbáláyé, wà lára àwọn àṣà tí a lè rí ní àwọn ìlú wọ̀nyí tí wọ́n ti ń sọ èdè Yorùbá. Bákanáà ẹ̀wẹ̀ àwọn àṣà ajẹmẹ́sìn yií tún wọ́npọ̀ ní ìlú Amẹ́ríkà àti ní àwọn ibòmíràn."
 			},
 			"population":"39,726,790"
 		},
@@ -670,7 +670,7 @@ var languageData = {
 			"countries":["Niger", "Burkina Faso", "Mali", "Nigeria"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"3,680,100"
 		},
@@ -678,7 +678,7 @@ var languageData = {
 			"countries":["Democratic Republic of the Congo", "Central African Republic", "South Sudan"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"1,242,000"
 		},
@@ -686,7 +686,7 @@ var languageData = {
 			"countries":["Eswatini", "Botswana", "Lesotho", "Malawi", "Mozambique"],
 			"text":{
 				"english":"",
-				"target":""
+				"targetLanguage":""
 			},
 			"population":"27,502,100"
 		}
