@@ -60,6 +60,8 @@ function closeLanguagePage(){
 	languageUi.style.pointerEvents = 'none';
 	languagePageNav.style.opacity = 0;
 	languagePageNav.style.pointerEvents = "none";
+	backToLanguageMap.style.opacity = 0;
+	backToLanguageMap.style.pointerEvents = 'none';
 	for(var page in languagePages){
 		languagePages[page].style.opacity = 0;
 		languagePages[page].style.pointerEvents = 'none';
