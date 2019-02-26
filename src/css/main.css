@@ -325,3 +325,10 @@
 	width: 540px;
 	height: 600px;
 }
+
+#credit{
+	position: absolute;
+	top: 560px;
+	z-index: 20;
+	color: #ffffff;
+}
